@@ -1,3 +1,5 @@
+package lexer_analyser;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -5,15 +7,15 @@ import java.util.Map;
  * Created by User on 06.10.2015.
  */
 public class Token {
-    private int value;
+    private Integer value;
     private Lexer.LexerValues symbol;
     public static final Map<String, Lexer.LexerValues> SYMBOLS;
     public static final Map<String, Lexer.LexerValues> WORDS;
     static {
         SYMBOLS = new HashMap<String, Lexer.LexerValues>();
         WORDS = new HashMap<String, Lexer.LexerValues>();
-        SYMBOLS.put("}", Lexer.LexerValues.LBRA);
-        SYMBOLS.put("{", Lexer.LexerValues.RBRA);
+        SYMBOLS.put("{", Lexer.LexerValues.LBRA);
+        SYMBOLS.put("}", Lexer.LexerValues.RBRA);
         SYMBOLS.put("=", Lexer.LexerValues.EQUAL);
         SYMBOLS.put(";", Lexer.LexerValues.SEMICOLON);
         SYMBOLS.put("(", Lexer.LexerValues.LPAR);
@@ -25,6 +27,10 @@ public class Token {
         WORDS.put("else", Lexer.LexerValues.ELSE);
         WORDS.put("do", Lexer.LexerValues.DO);
         WORDS.put("while", Lexer.LexerValues.WHILE);
+        WORDS.put("turn", Lexer.LexerValues.TURN);
+        WORDS.put("go", Lexer.LexerValues.GO);
+        WORDS.put("right", Lexer.LexerValues.RIGHT);
+        WORDS.put("left", Lexer.LexerValues.LEFT);
     }
 
     public Token(){
@@ -36,7 +42,7 @@ public class Token {
         this.symbol = symbol;
     }
 
-    public void setValue(int value) {
+    public void setValue(Integer value) {
         this.value = value;
     }
 
@@ -50,7 +56,7 @@ public class Token {
 
     @Override
     public String toString() {
-        return "Token{" +
+        return "lexer_analyser.Token{" +
                 "value=" + value +
                 ", symbol=" + symbol +
                 '}';

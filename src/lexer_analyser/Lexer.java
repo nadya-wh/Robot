@@ -1,4 +1,5 @@
-import java.io.BufferedReader;
+package lexer_analyser;
+
 import java.io.IOException;
 
 /**
@@ -7,15 +8,18 @@ import java.io.IOException;
 public class Lexer {
     private String input;
     private int i;
-    private char currentSymbol;
+    private Character currentSymbol;
+    public Token token;
 
     public enum LexerValues {
         NUM, ID, IF, ELSE, WHILE, DO, LBRA, RBRA, LPAR, RPAR, PLUS, MINUS, LESS,
-        EQUAL, SEMICOLON, EOF, MORE
+        EQUAL, SEMICOLON, EOF, MORE, TURN, RIGHT, LEFT, GO
     }
 
 
     public Lexer(String input) {
+        token = new Token();
+        currentSymbol = new Character('\0');
         this.input = input;
         i = 0;
         currentSymbol = ' ';
@@ -24,23 +28,36 @@ public class Lexer {
     private void getNextChar() {
         if (i < input.length())
             currentSymbol = input.charAt(i);
+        else {
+            currentSymbol = null;
+        }
         i++;
     }
 
-    public Token nextToken() throws IOException {
-        Token token = new Token();
+    private boolean hasNextChar() {
+        if (i < input.length())
+            return true;
+        return false;
+    }
 
-        while (token.getSymbol() == null && token.getSymbol() != LexerValues.EOF) {
-            if (i > input.length()) {
+    public void nextToken() throws IOException {
+        token.setSymbol(null);
+        token.setValue(null);
+        while (token.getSymbol() == null) {
+            if (currentSymbol == null) {
                 token.setSymbol(LexerValues.EOF);
-                break;
             }
-            //getNextChar();
-            if (Character.isWhitespace(currentSymbol)) {
-                getNextChar();
+//            if (hasNextChar())
+//                getNextChar();
+//            else {
+//                token.setSymbol(LexerValues.EOF);
+//                break;
+//            }
+            else if (Character.isWhitespace(currentSymbol)) {
+                    getNextChar();
             } else if (Token.SYMBOLS.containsKey(String.valueOf(currentSymbol))) {
                 token.setSymbol(Token.SYMBOLS.get(String.valueOf(currentSymbol)));
-                getNextChar();
+                    getNextChar();
             } else if (Character.isDigit(currentSymbol)) {
                 int intval = 0;
                 while (Character.isDigit(currentSymbol)) {
@@ -62,7 +79,7 @@ public class Lexer {
                     token.setSymbol(Token.WORDS.get(ident.toString()));
                 } else if (ident.length() == 1) {
                     token.setSymbol(LexerValues.ID);
-                    token.setValue(ident.charAt(0));
+                    token.setValue((int)ident.charAt(0));//TODO: check
                 } else {
                     throw new IllegalArgumentException("Unknown identifier: " + ident);
                 }
@@ -70,18 +87,15 @@ public class Lexer {
                 throw new IllegalArgumentException("Unexpected symbol: " + currentSymbol);
             }
         }
-
-        return token;
     }
 
     public static void main(String[] args) {
         String code = "if();";
         Lexer lexer = new Lexer(code);
-        Token token = new Token();
-        while (token.getSymbol() != LexerValues.EOF) {
+        while (lexer.token.getSymbol() != LexerValues.EOF) {
             try {
-                token = lexer.nextToken();
-                System.out.println(token);
+                lexer.nextToken();
+                System.out.println(lexer.token);
             } catch (IOException e) {
                 e.printStackTrace();
             }

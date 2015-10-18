@@ -27,10 +27,9 @@ public class Token {
         WORDS.put("else", Lexer.LexerValues.ELSE);
         WORDS.put("do", Lexer.LexerValues.DO);
         WORDS.put("while", Lexer.LexerValues.WHILE);
-        WORDS.put("turn", Lexer.LexerValues.TURN);
+        WORDS.put("turn_right", Lexer.LexerValues.TURN_RIGHT);
+        WORDS.put("turn_left", Lexer.LexerValues.TURN_LEFT);
         WORDS.put("go", Lexer.LexerValues.GO);
-        WORDS.put("right", Lexer.LexerValues.RIGHT);
-        WORDS.put("left", Lexer.LexerValues.LEFT);
     }
 
     public Token(){

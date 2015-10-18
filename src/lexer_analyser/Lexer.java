@@ -13,7 +13,7 @@ public class Lexer {
 
     public enum LexerValues {
         NUM, ID, IF, ELSE, WHILE, DO, LBRA, RBRA, LPAR, RPAR, PLUS, MINUS, LESS,
-        EQUAL, SEMICOLON, EOF, MORE, TURN, RIGHT, LEFT, GO
+        EQUAL, SEMICOLON, EOF, MORE, TURN_RIGHT, TURN_LEFT, GO
     }
 
 
@@ -68,7 +68,7 @@ public class Lexer {
                 token.setSymbol(LexerValues.NUM);
             } else if (Character.isAlphabetic(currentSymbol)) { //TODO:tests
                 StringBuilder ident = new StringBuilder("");
-                while (Character.isAlphabetic(currentSymbol)) {
+                while (Character.isAlphabetic(currentSymbol) || currentSymbol.equals(new Character('_'))) {
                     ident.append(currentSymbol);
                     getNextChar();
                 }

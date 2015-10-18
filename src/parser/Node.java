@@ -7,7 +7,7 @@ import lexer_analyser.Token;
  * Created by User on 13.10.2015.
  */
 public class Node {
-    public enum NodeType {VAR, CONST, ADD, SUB, LT, SET, IF1, IF2, WHILE, DO, EMPTY, SEQ, EXPR, PROG}
+    public enum NodeType {VAR, CONST, ADD, SUB, LT, SET, IF1, IF2, WHILE, DO, EMPTY, SEQ, EXPR, PROG, TURN_RIGHT, TURN_LEFT, GO}
 
     private NodeType nodeType;
     private int value;

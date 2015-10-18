@@ -10,7 +10,7 @@ import java.io.IOException;
  */
 public class MyTest {
     public static void main(String[] args) throws IOException {
-        Lexer lexer = new Lexer( "{ a=3; b=5; }");
+        Lexer lexer = new Lexer( "{ turn_left; go; }");
         Parser parser = new Parser(lexer);
         Node programNode = parser.parse();
         System.out.println(programNode);

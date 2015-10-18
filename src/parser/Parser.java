@@ -148,10 +148,20 @@ public class Parser {
             n.setValue(lexer.token.getValue());
             lexer.nextToken();
             return n;
+        } else if (lexer.token.getSymbol() == Lexer.LexerValues.TURN_RIGHT) {
+            n.setNodeType(Node.NodeType.TURN_RIGHT);
+            lexer.nextToken();
+        } else if (lexer.token.getSymbol() == Lexer.LexerValues.TURN_LEFT) {
+            n.setNodeType(Node.NodeType.TURN_LEFT);
+            lexer.nextToken();
+        } else if (lexer.token.getSymbol() == Lexer.LexerValues.GO) {
+            n.setNodeType(Node.NodeType.GO);
+            lexer.nextToken();
         } else {
             return getParenthesisExpression();
             //TODO: WHYYYY???
         }
+        return n;
     }
 
 }

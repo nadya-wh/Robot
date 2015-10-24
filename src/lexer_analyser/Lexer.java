@@ -13,7 +13,7 @@ public class Lexer {
 
     public enum LexerValues {
         NUM, ID, IF, ELSE, WHILE, DO, LBRA, RBRA, LPAR, RPAR, PLUS, MINUS, LESS,
-        EQUAL, SEMICOLON, EOF, MORE, TURN_RIGHT, TURN_LEFT, GO
+        EQUAL, SEMICOLON, EOF, MORE, TURN_RIGHT, TURN_LEFT, GO, NOT, AND, OR
     }
 
 
@@ -46,18 +46,11 @@ public class Lexer {
         while (token.getSymbol() == null) {
             if (currentSymbol == null) {
                 token.setSymbol(LexerValues.EOF);
-            }
-//            if (hasNextChar())
-//                getNextChar();
-//            else {
-//                token.setSymbol(LexerValues.EOF);
-//                break;
-//            }
-            else if (Character.isWhitespace(currentSymbol)) {
-                    getNextChar();
+            } else if (Character.isWhitespace(currentSymbol)) {
+                getNextChar();
             } else if (Token.SYMBOLS.containsKey(String.valueOf(currentSymbol))) {
                 token.setSymbol(Token.SYMBOLS.get(String.valueOf(currentSymbol)));
-                    getNextChar();
+                getNextChar();
             } else if (Character.isDigit(currentSymbol)) {
                 int intval = 0;
                 while (Character.isDigit(currentSymbol)) {
@@ -79,7 +72,7 @@ public class Lexer {
                     token.setSymbol(Token.WORDS.get(ident.toString()));
                 } else if (ident.length() == 1) {
                     token.setSymbol(LexerValues.ID);
-                    token.setValue((int)ident.charAt(0));//TODO: check
+                    token.setValue((int) ident.charAt(0));//TODO: check
                 } else {
                     throw new IllegalArgumentException("Unknown identifier: " + ident);
                 }

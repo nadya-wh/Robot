@@ -1,6 +1,4 @@
 import lexer_analyser.Lexer;
-import lexer_analyser.Token;
-import parser.Node;
 import parser.Parser;
 
 import java.io.IOException;
@@ -10,10 +8,21 @@ import java.io.IOException;
  */
 public class MyTest {
     public static void main(String[] args) throws IOException {
-        Lexer lexer = new Lexer( "{ turn_left; go; }");
+        Lexer lexer = new Lexer("a = 2; b = 1; c = 0; if(a > b and b > c){}");
         Parser parser = new Parser(lexer);
-        Node programNode = parser.parse();
-        System.out.println(programNode);
+        boolean flag = true;
+        while (flag) {
+            Lexer.LexerValues result = parser.parse();
+            System.out.println(result);
+            if (result == Lexer.LexerValues.EOF)
+                flag = false;
+        }
+
+//        NodeParser node_parser = new NodeParser(lexer);
+//        node_parser.parse();
+//        System.out.print(node_parser.getNode());
+
+
 
     }
 }

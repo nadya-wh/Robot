@@ -23,6 +23,8 @@ public class Token {
         SYMBOLS.put("+", Lexer.LexerValues.PLUS);
         SYMBOLS.put("-", Lexer.LexerValues.MINUS);
         SYMBOLS.put(">", Lexer.LexerValues.MORE);
+        SYMBOLS.put("<", Lexer.LexerValues.LESS);
+        SYMBOLS.put("!", Lexer.LexerValues.NOT);
         WORDS.put("if", Lexer.LexerValues.IF);
         WORDS.put("else", Lexer.LexerValues.ELSE);
         WORDS.put("do", Lexer.LexerValues.DO);
@@ -30,6 +32,8 @@ public class Token {
         WORDS.put("turn_right", Lexer.LexerValues.TURN_RIGHT);
         WORDS.put("turn_left", Lexer.LexerValues.TURN_LEFT);
         WORDS.put("go", Lexer.LexerValues.GO);
+        WORDS.put("and", Lexer.LexerValues.AND);
+        WORDS.put("or", Lexer.LexerValues.OR);
     }
 
     public Token(){
@@ -42,7 +46,11 @@ public class Token {
     }
 
     public void setValue(Integer value) {
-        this.value = value;
+        if(value != null) {
+            this.value = value;
+        } else {
+            value = 0;
+        }
     }
 
     public int getValue() {

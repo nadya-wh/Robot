@@ -1,167 +1,179 @@
 package parser;
 
 import lexer_analyser.Lexer;
+import lexer_analyser.Token;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
- * Created by User on 13.10.2015.
+ * Created by User on 20.10.2015.
  */
 public class Parser {
-    private Lexer lexer;
-    private Node node;
+    Lexer lexer;
+    HashMap<Integer, Integer> ids;
 
     public Parser(Lexer lexer) {
         this.lexer = lexer;
+        ids = new HashMap<Integer, Integer>(26);
     }
 
-    public Node getNode() {
-        return node;
-    }
-
-    public Node parse() throws IOException {
+    public Lexer.LexerValues parse() throws IOException {
         lexer.nextToken();
-        node = new Node(Node.NodeType.PROG);
-        node.setOp1(statement());
-        node.setNodeType(Node.NodeType.PROG);
-        return node;
-    }
-
-    public Node statement() throws IOException {
-        Node n = new Node();
-        if (lexer.token.getSymbol() == Lexer.LexerValues.IF) {
-            n.setNodeType(Node.NodeType.IF1);
-            lexer.nextToken();
-            n.setOp1(getParenthesisExpression());
-            n.setOp2(statement());
-            if (lexer.token.getSymbol() == Lexer.LexerValues.ELSE) {
-                n.setNodeType(Node.NodeType.IF2);
+        switch (lexer.token.getSymbol()) {
+            case LBRA:
+                return Lexer.LexerValues.LBRA;
+            case RBRA:
+                return Lexer.LexerValues.RBRA;
+            case IF:
                 lexer.nextToken();
-                n.setOp3(statement());
-            }
-        } else if (lexer.token.getSymbol() == Lexer.LexerValues.WHILE) {
-            n.setNodeType(Node.NodeType.WHILE);
-            lexer.nextToken();
-            n.setOp1(getParenthesisExpression());
-            n.setOp2(statement());
-        } else if (lexer.token.getSymbol() == Lexer.LexerValues.DO) {
-            n = new Node(Node.NodeType.DO);
-            lexer.nextToken();
-            n.setOp1(statement());
-            if (lexer.token.getSymbol() != Lexer.LexerValues.WHILE) {
-                throw new IllegalArgumentException("'While' expected");
-            }
-            lexer.nextToken();
-            n.setOp2(getParenthesisExpression());
-            if (lexer.token.getSymbol() != Lexer.LexerValues.SEMICOLON) {
-                throw new IllegalArgumentException("';' expected");
-            }
-        } else if (lexer.token.getSymbol() == Lexer.LexerValues.SEMICOLON) {
-            n = new Node(Node.NodeType.EMPTY);
-            lexer.nextToken();
-        } else if (lexer.token.getSymbol() == Lexer.LexerValues.LBRA) {
-
-            n = new Node(Node.NodeType.EMPTY);
-            lexer.nextToken();
-            while (lexer.token.getSymbol() != Lexer.LexerValues.RBRA) {
-                Node op1 = n;
-                n = new Node(Node.NodeType.SEQ, op1, statement());
-            }
-            lexer.nextToken();
-        } else {
-            n = new Node(Node.NodeType.EXPR);
-            n.setOp1(getExpression());
-            if (lexer.token.getSymbol() != Lexer.LexerValues.SEMICOLON) {
-                throw new IllegalArgumentException("';' expected");
-            }
-            lexer.nextToken();
+                if(countStatement()) {
+                   doBlock(); //TODO: check;
+                } else {
+                    missStatement();
+                }
+                return Lexer.LexerValues.IF;
+            case WHILE:
+                return Lexer.LexerValues.WHILE;
+            case GO:
+                return Lexer.LexerValues.GO;
+            case TURN_LEFT:
+                return Lexer.LexerValues.TURN_RIGHT;
+            case TURN_RIGHT:
+                return Lexer.LexerValues.TURN_RIGHT;
+            case ID:
+                idToken();
+                return Lexer.LexerValues.ID;
+            case EOF:
+                return Lexer.LexerValues.EOF;
+            case SEMICOLON:
+                return Lexer.LexerValues.SEMICOLON;
+            default:
+                throw new IllegalArgumentException("SGW");
         }
-        return n;
     }
 
-    public Node getParenthesisExpression() throws IOException {
-        Node n;
-        if (lexer.token.getSymbol() != Lexer.LexerValues.LPAR) {
-            throw new IllegalArgumentException("'(' expected");
-        }
+    public void idToken() throws IOException {
+        int id = lexer.token.getValue();
         lexer.nextToken();
-        n = getExpression();
-        if (lexer.token.getSymbol() != Lexer.LexerValues.RPAR) {
-            throw new IllegalArgumentException("')' expected");
+        switch (lexer.token.getSymbol()) {
+            case EQUAL:
+                int value = countExpression();
+                ids.put(id, value);
+                break;
+            case SEMICOLON:
+                ids.put(id, 0);
+                break;
         }
+
+    }
+
+    public int countExpression() throws IOException {
+        System.out.println("Count statement");
+        int value = 0;
+        Lexer.LexerValues prevOperation = Lexer.LexerValues.EQUAL;
         lexer.nextToken();
-        return n;
-    }
-
-    public Node getExpression() throws IOException {
-        if (lexer.token.getSymbol() != Lexer.LexerValues.ID) {
-            return test();
-        }
-        Node n = test();
-        if (n.getNodeType() == Node.NodeType.VAR && lexer.token.getSymbol() == Lexer.LexerValues.EQUAL) {
-            lexer.nextToken();
-            Node op1 = n;
-            n = new Node(Node.NodeType.SET, op1, getExpression());
-        }
-        return n;
-    }
-
-    private Node test() throws IOException {
-        Node n = sum();
-        if (lexer.token.getSymbol() == Lexer.LexerValues.LESS) {
-            lexer.nextToken();
-            Node op1 = n;
-            n = new Node(Node.NodeType.SET, op1, getExpression());
-        }
-        return n;
-    }
-
-    public Node sum() throws IOException {
-        Node n = term();
-        Node.NodeType type;
-        while (lexer.token.getSymbol() == Lexer.LexerValues.PLUS ||
-                lexer.token.getSymbol() == Lexer.LexerValues.MINUS) {
-            if (lexer.token.getSymbol() == Lexer.LexerValues.PLUS) {
-                type = Node.NodeType.ADD;
+        while (lexer.token.getSymbol() != Lexer.LexerValues.SEMICOLON) {
+            if (lexer.token.getSymbol() == Lexer.LexerValues.NUM || lexer.token.getSymbol() == Lexer.LexerValues.ID) {
+                if (prevOperation == Lexer.LexerValues.EQUAL) {
+                    value = lexer.token.getValue();
+                } else if (prevOperation == Lexer.LexerValues.MINUS) {
+                    value -= lexer.token.getValue();
+                } else if (prevOperation == Lexer.LexerValues.PLUS) {
+                    value += lexer.token.getValue();
+                } else {
+                    throw new IllegalArgumentException("Illegal operation");
+                }
+                lexer.nextToken();
             } else {
-                type = Node.NodeType.SUB;
+                throw new IllegalArgumentException("Illegal operation");
             }
-            lexer.nextToken();
-            Node op1 = n;
-            n = new Node();
-            n.setNodeType(type);
-            n.setOp1(op1);
-            n.setOp2(term());
+
         }
-        return n;
+        return value;
     }
 
-    public Node term() throws IOException {
-        Node n = new Node();
-        if (lexer.token.getSymbol() == Lexer.LexerValues.ID) {
-            n.setNodeType(Node.NodeType.VAR);
-            n.setValue(lexer.token.getValue());
+    public boolean countStatement() throws IOException {
+        System.out.println("Count statement");
+        if(lexer.token.getSymbol() == Lexer.LexerValues.LPAR) {
+            //throw new IllegalArgumentException("'(' expected");
             lexer.nextToken();
-            return n;
-        } else if (lexer.token.getSymbol() == Lexer.LexerValues.NUM) {
-            n.setNodeType(Node.NodeType.CONST);
-            n.setValue(lexer.token.getValue());
-            lexer.nextToken();
-            return n;
-        } else if (lexer.token.getSymbol() == Lexer.LexerValues.TURN_RIGHT) {
-            n.setNodeType(Node.NodeType.TURN_RIGHT);
-            lexer.nextToken();
-        } else if (lexer.token.getSymbol() == Lexer.LexerValues.TURN_LEFT) {
-            n.setNodeType(Node.NodeType.TURN_LEFT);
-            lexer.nextToken();
-        } else if (lexer.token.getSymbol() == Lexer.LexerValues.GO) {
-            n.setNodeType(Node.NodeType.GO);
-            lexer.nextToken();
-        } else {
-            return getParenthesisExpression();
-            //TODO: WHYYYY???
         }
-        return n;
+        ArrayList<Token> tokens = new ArrayList<Token>();
+        while (lexer.token.getSymbol() != Lexer.LexerValues.RPAR && lexer.token.getSymbol() != Lexer.LexerValues.AND
+                && lexer.token.getSymbol() != Lexer.LexerValues.OR) {
+            Token token = new Token();
+            token.setSymbol(lexer.token.getSymbol());
+            token.setValue(lexer.token.getValue());
+            tokens.add(token);
+            lexer.nextToken();
+        }
+        //tokens.remove(tokens.size() - 1);
+        if (lexer.token.getSymbol() == Lexer.LexerValues.AND) {
+            lexer.nextToken();
+            boolean left = countSimpleExpression(tokens);
+            boolean right = countStatement();
+            return left && right;
+        } else if (lexer.token.getSymbol() == Lexer.LexerValues.OR) {
+            lexer.nextToken();
+            boolean left = countSimpleExpression(tokens);
+            boolean right = countStatement();
+            return left || right;
+        } else {
+            lexer.nextToken();
+            return countSimpleExpression(tokens);
+        }
+    }
+
+    public void missStatement() throws IOException {
+        if(lexer.token.getSymbol() != Lexer.LexerValues.LBRA){
+            throw new IllegalArgumentException("'{' expected");
+        }
+        while (lexer.token.getSymbol() != Lexer.LexerValues.RBRA) {
+            lexer.nextToken();
+        }
+    }
+
+    public void doBlock() throws IOException {
+        //lexer.nextToken();
+        if (lexer.token.getSymbol() != Lexer.LexerValues.LBRA) {
+            throw new IllegalArgumentException("'{' expected");
+        }
+        lexer.nextToken();
+        boolean stop = false;
+        while (!stop) {
+            if(lexer.token.getSymbol() == Lexer.LexerValues.RBRA)
+                stop = true;
+            //TODO: check;
+            lexer.nextToken();
+        }
+    }
+
+    public boolean countSimpleExpression(ArrayList<Token> tokens) {
+        System.out.println("Count simple statement");
+        for(int i = 0; i < tokens.size(); i++) {
+            switch (tokens.get(i).getSymbol()) {
+                case ID:
+                    if (tokens.size() == 3) {
+                        i++;
+                        switch (tokens.get(i).getSymbol()) {
+                            case LESS:
+                                return ids.get(tokens.get(i - 1).getValue()) < ids.get(tokens.get(i + 1).getValue());
+                            case MORE:
+                                return ids.get(tokens.get(i - 1).getValue()) > ids.get(tokens.get(i + 1).getValue());
+                            case EQUAL:
+                                return ids.get(tokens.get(i - 1).getValue()) == ids.get(tokens.get(i + 1).getValue());
+                        }
+                    } else {
+                        throw new IllegalArgumentException("Too difficult expression in if statement.");
+                    }
+                    break;
+                default:
+                    throw new IllegalArgumentException("Unknown expression in if statement.");
+            }
+        }
+        return false;
     }
 
 }

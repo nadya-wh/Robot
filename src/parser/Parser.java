@@ -11,12 +11,13 @@ import java.util.HashMap;
  * Created by User on 20.10.2015.
  */
 public class Parser {
+    public static final int ALPHABET_SIZE = 26;
     Lexer lexer;
     HashMap<Integer, Integer> ids;
 
     public Parser(Lexer lexer) {
         this.lexer = lexer;
-        ids = new HashMap<Integer, Integer>(26);
+        ids = new HashMap<Integer, Integer>(ALPHABET_SIZE);
     }
 
     public Lexer.LexerValues parse() throws IOException {

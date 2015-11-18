@@ -46,7 +46,7 @@ public class Lexer {
         while (token.getSymbol() == null) {
             if (currentSymbol == null) {
                 token.setSymbol(LexerValues.EOF);
-            } else if (Character.isWhitespace(currentSymbol)) {
+            } else if (Character.isWhitespace(currentSymbol) || currentSymbol == '\n') {
                 getNextChar();
             } else if (Token.SYMBOLS.containsKey(String.valueOf(currentSymbol))) {
                 token.setSymbol(Token.SYMBOLS.get(String.valueOf(currentSymbol)));

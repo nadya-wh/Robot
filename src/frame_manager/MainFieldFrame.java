@@ -2,8 +2,10 @@ package frame_manager;
 
 import entities.*;
 import entities.Robot;
+import logic.CodeExecutor;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import javax.swing.table.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -13,21 +15,30 @@ import java.awt.image.BufferedImage;
  * Created by User on 20.10.2015.
  */
 public class MainFieldFrame extends JFrame {
-    ImageIcon robotImage = new ImageIcon("robot.jpg");
+    public static final String RUN_ICON_PATH = "run_icon.png";
+    public static final String STOP_ICON_PATH = "stop.png";
+    public static final String ROBOT_ICON_PATH = "robot.jpg";
+    private ImageIcon robotImage = new ImageIcon(ROBOT_ICON_PATH);
     private int rowHeight;
     private int columnWidth;
     private JLabel label;
     private JTable table;
     private JTextArea codePane;
     private JButton executeCodeButton;
+    private JButton stopExecuteCodeButton;
     private JScrollPane tableScrollPane;
     private JScrollPane codeScrollPane;
+    private JPanel buttonPanel;
     private int rowCount;
     private int columnCount;
-
+    private int CONST = 95;
+    private int upHeight;
 
     private Field field;
     private Robot robot;
+
+    private boolean isExecuting = false;
+    private CodeExecutor codeExecutor;
 
     public static int WIDTH;
     public static int HEIGHT;
@@ -53,20 +64,27 @@ public class MainFieldFrame extends JFrame {
         JMenuBar menuBar = new MenuCreator(this).createMenuBar();
 
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        createButtonPanel();
+        upHeight = menuBar.getHeight() + buttonPanel.getHeight();
         WIDTH = (int)screenSize.getWidth();
-        HEIGHT = (int)screenSize.getHeight() - 30;
+        HEIGHT = (int)screenSize.getHeight() - buttonPanel.getHeight() - menuBar.getHeight() - 30;
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setLayout(new BorderLayout());
         createCodePane();
+        //label = new JLabel();
+        scaleRobotImage();
         createTable();
 
 
         this.setJMenuBar(menuBar);
+
+        this.add(buttonPanel, BorderLayout.NORTH);
         this.add(codeScrollPane, BorderLayout.WEST);
         this.add(tableScrollPane, BorderLayout.CENTER);
 
         this.setSize((int) WIDTH, (int) HEIGHT);
-        scaleRobotImage();
+        //scaleRobotImage();
+        refreshTable();
         this.setIconImage(Toolkit.getDefaultToolkit().getImage("icon.png"));
         this.setVisible(true);
         this.addComponentListener(new ComponentAdapter() {
@@ -85,7 +103,6 @@ public class MainFieldFrame extends JFrame {
                 Component component = super.prepareRenderer(renderer, rowIndex, columnIndex);
 
                 if (rowIndex == field.getRobotRow() && columnIndex == field.getRobotColumn()) {
-                    label.setBackground(Color.GREEN);
                     return label;
                 } else if (field.isMarked(rowIndex, columnIndex)) {
                     component.setBackground(Color.RED);
@@ -145,8 +162,9 @@ public class MainFieldFrame extends JFrame {
         });
 
         tableScrollPane = new JScrollPane(table);
-        rowHeight = (HEIGHT - 65) / rowCount;
-        columnWidth = (int) ((HEIGHT - codeScrollPane.getWidth()) / columnCount);
+        rowHeight = (HEIGHT - CONST) / rowCount;
+        //columnWidth = (int) ((HEIGHT - codeScrollPane.getWidth()) / columnCount);
+        //columnWidth = (int) (HEIGHT / columnCount) - 100;
 
         table.setRowHeight(rowHeight);
     }
@@ -155,6 +173,49 @@ public class MainFieldFrame extends JFrame {
         codePane = new JTextArea(5, 20);
         codePane.setSize(100, 100);
         codeScrollPane = new JScrollPane(codePane);
+    }
+
+    public void createButtonPanel() {
+        buttonPanel = new JPanel(new FlowLayout());
+        executeCodeButton = new JButton(new ImageIcon(RUN_ICON_PATH));
+        stopExecuteCodeButton = new JButton(new ImageIcon(STOP_ICON_PATH));
+        makeBeautifulButton(executeCodeButton);
+        makeBeautifulButton(stopExecuteCodeButton);
+        buttonPanel.add(executeCodeButton);
+        buttonPanel.add(stopExecuteCodeButton);
+        executeCodeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (!isExecuting) {
+                    isExecuting = true;
+                    codeExecutor = new CodeExecutor(getCode(), robot);
+                    setCodePaneNotEditable();
+                    codeExecutor.execute();
+                } else {
+                    codeExecutor.execute();
+                }
+                refreshTable();
+            }
+        });
+
+        stopExecuteCodeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                isExecuting = false;
+                field.setRobotColumn(0);
+                field.setRobotRow(0);
+                setCodePaneEditable();
+                refreshTable();
+            }
+        });
+    }
+
+    public void makeBeautifulButton(JButton button) {
+        button.setBackground(Color.LIGHT_GRAY);
+        button.setOpaque(false);
+        button.setBorderPainted(false);
+        button.setMargin(new Insets(0, 0, 0, 0));
+        button.setFocusPainted(false);
     }
 
     public Field getField() {
@@ -174,7 +235,7 @@ public class MainFieldFrame extends JFrame {
     }
 
     public void refreshTable() {
-        rowHeight = (this.getHeight() - 65) / rowCount;
+        rowHeight = (this.getHeight() - upHeight - CONST) / rowCount;
         if(rowHeight > 1) {
             columnWidth = ((this.getHeight() - codeScrollPane.getWidth()) / columnCount);
             table.setRowHeight(rowHeight);
@@ -187,6 +248,10 @@ public class MainFieldFrame extends JFrame {
 
     public void setCodePaneNotEditable() {
         codePane.setEditable(false);
+    }
+
+    public void setCodePaneEditable() {
+        codePane.setEditable(true);
     }
 
     public static void main(String[] args) {

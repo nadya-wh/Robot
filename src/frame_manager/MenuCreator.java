@@ -1,6 +1,6 @@
 package frame_manager;
 
-import entities.Field;
+import entity.Field;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -34,6 +34,7 @@ public class MenuCreator {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFileChooser fileChooser = new JFileChooser();
+                fileChooser.setDialogTitle("Save");
                 int retVal = fileChooser.showOpenDialog(parent);
                 if (retVal == JFileChooser.APPROVE_OPTION) {
                     File file = fileChooser.getSelectedFile();

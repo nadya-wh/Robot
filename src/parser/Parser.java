@@ -40,7 +40,7 @@ public class Parser {
             case GO:
                 return Lexer.LexerValues.GO;
             case TURN_LEFT:
-                return Lexer.LexerValues.TURN_RIGHT;
+                return Lexer.LexerValues.TURN_LEFT;
             case TURN_RIGHT:
                 return Lexer.LexerValues.TURN_RIGHT;
             case ID:
@@ -114,12 +114,16 @@ public class Parser {
         if (lexer.token.getSymbol() == Lexer.LexerValues.AND) {
             lexer.nextToken();
             boolean left = countSimpleExpression(tokens);
+            System.out.print(left);
             boolean right = countStatement();
+            System.out.print(right);
             return left && right;
         } else if (lexer.token.getSymbol() == Lexer.LexerValues.OR) {
             lexer.nextToken();
             boolean left = countSimpleExpression(tokens);
+            System.out.print(left);
             boolean right = countStatement();
+            System.out.print(right);
             return left || right;
         } else {
             lexer.nextToken();

@@ -52,12 +52,12 @@ public class Lexer {
                 token.setSymbol(Token.SYMBOLS.get(String.valueOf(currentSymbol)));
                 getNextChar();
             } else if (Character.isDigit(currentSymbol)) {
-                int intval = 0;
+                int intValue = 0;
                 while (Character.isDigit(currentSymbol)) {
-                    intval = intval * 10 + Character.getNumericValue(currentSymbol);
+                    intValue = intValue * 10 + Character.getNumericValue(currentSymbol);
                     getNextChar();
                 }
-                token.setValue(intval);
+                token.setValue(intValue);
                 token.setSymbol(LexerValues.NUM);
             } else if (Character.isAlphabetic(currentSymbol)) { //TODO:tests
                 StringBuilder ident = new StringBuilder("");
@@ -83,7 +83,10 @@ public class Lexer {
     }
 
     public static void main(String[] args) {
-        String code = "if();";
+        String code = "a = 1;\n" +
+                "if (a = 1) {\n" +
+                "go;\n" +
+                "}\n";
         Lexer lexer = new Lexer(code);
         while (lexer.token.getSymbol() != LexerValues.EOF) {
             try {

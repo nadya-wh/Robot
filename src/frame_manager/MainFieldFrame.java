@@ -1,26 +1,29 @@
 package frame_manager;
 
-import entities.*;
-import entities.Robot;
+import entity.*;
+import entity.Robot;
+import listener.CodeExecuteActionListener;
 import logic.CodeExecutor;
+import util.ResizeAdapter;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import javax.swing.table.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.image.BufferedImage;
 
 /**
  * Created by User on 20.10.2015.
  */
 public class MainFieldFrame extends JFrame {
-    public static final String RUN_ICON_PATH = "run_icon.png";
-    public static final String STOP_ICON_PATH = "stop.png";
-    public static final String ROBOT_ICON_PATH = "robot.jpg";
-    private ImageIcon robotImage = new ImageIcon(ROBOT_ICON_PATH);
+
     private int rowHeight;
     private int columnWidth;
+    private int rowCount;
+    private int columnCount;
+    private int CONST = 95;
+    private int upHeight;
+
+    private ImageIcon robotImage;
     private JLabel label;
     private JTable table;
     private JTextArea codePane;
@@ -29,15 +32,11 @@ public class MainFieldFrame extends JFrame {
     private JScrollPane tableScrollPane;
     private JScrollPane codeScrollPane;
     private JPanel buttonPanel;
-    private int rowCount;
-    private int columnCount;
-    private int CONST = 95;
-    private int upHeight;
 
     private Field field;
     private Robot robot;
 
-    private boolean isExecuting = false;
+//    private boolean isExecuting = false;
     private CodeExecutor codeExecutor;
 
     public static int WIDTH;
@@ -60,7 +59,28 @@ public class MainFieldFrame extends JFrame {
         codePane.setText(code);
     }
 
+    public Robot getRobot() {
+        return robot;
+    }
+
+    public int getColumnWidth() {
+        return columnWidth;
+    }
+
+    public int getRowHeight() {
+        return rowHeight;
+    }
+
+    public ImageIcon getRobotImage() {
+        return robotImage;
+    }
+
+    public void setLabel(JLabel label) {
+        this.label = label;
+    }
+
     public void createUI() {
+        robotImage = new ImageIcon(ImageWorker.ROBOT_IMAGES[ImageWorker.SOUTH]);
         JMenuBar menuBar = new MenuCreator(this).createMenuBar();
 
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -71,10 +91,12 @@ public class MainFieldFrame extends JFrame {
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setLayout(new BorderLayout());
         createCodePane();
-        //label = new JLabel();
-        scaleRobotImage();
+        label = ImageWorker.scaleRobotImage(robotImage, columnWidth, rowHeight);
         createTable();
-
+        GridBagConstraints c = new GridBagConstraints();
+        c.fill = GridBagConstraints.BOTH;
+        c.weightx = 1;
+        c.weighty = 0;
 
         this.setJMenuBar(menuBar);
 
@@ -82,19 +104,12 @@ public class MainFieldFrame extends JFrame {
         this.add(codeScrollPane, BorderLayout.WEST);
         this.add(tableScrollPane, BorderLayout.CENTER);
 
-        this.setSize((int) WIDTH, (int) HEIGHT);
-        //scaleRobotImage();
+
+        this.setSize(WIDTH, HEIGHT);
         refreshTable();
-        this.setIconImage(Toolkit.getDefaultToolkit().getImage("icon.png"));
+        this.setIconImage(Toolkit.getDefaultToolkit().getImage(ImageWorker.APPLICATION_ICON));
         this.setVisible(true);
-        this.addComponentListener(new ComponentAdapter() {
-            @Override
-            public void componentResized(ComponentEvent e) {
-                super.componentResized(e);
-                refreshTable();
-                scaleRobotImage();
-            }
-        });
+        this.addComponentListener(new ResizeAdapter(this));
     }
 
     public void createTable() {
@@ -125,7 +140,7 @@ public class MainFieldFrame extends JFrame {
                 }
             }
         };
-        tableScrollPane = new JScrollPane();
+        //tableScrollPane = new JScrollPane();
         DefaultTableModel defaultTableModel = new DefaultTableModel(rowCount, columnCount);
         table.setModel(defaultTableModel);
         table.setTableHeader(null);
@@ -163,9 +178,8 @@ public class MainFieldFrame extends JFrame {
 
         tableScrollPane = new JScrollPane(table);
         rowHeight = (HEIGHT - CONST) / rowCount;
-        //columnWidth = (int) ((HEIGHT - codeScrollPane.getWidth()) / columnCount);
-        //columnWidth = (int) (HEIGHT / columnCount) - 100;
-
+        table.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
+        rowHeight = table.getRowHeight();
         table.setRowHeight(rowHeight);
     }
 
@@ -177,34 +191,36 @@ public class MainFieldFrame extends JFrame {
 
     public void createButtonPanel() {
         buttonPanel = new JPanel(new FlowLayout());
-        executeCodeButton = new JButton(new ImageIcon(RUN_ICON_PATH));
-        stopExecuteCodeButton = new JButton(new ImageIcon(STOP_ICON_PATH));
+        executeCodeButton = new JButton(new ImageIcon(ImageWorker.RUN_ICON_PATH));
+        stopExecuteCodeButton = new JButton(new ImageIcon(ImageWorker.STOP_ICON_PATH));
         makeBeautifulButton(executeCodeButton);
         makeBeautifulButton(stopExecuteCodeButton);
         buttonPanel.add(executeCodeButton);
         buttonPanel.add(stopExecuteCodeButton);
-        executeCodeButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (!isExecuting) {
-                    isExecuting = true;
-                    codeExecutor = new CodeExecutor(getCode(), robot);
-                    setCodePaneNotEditable();
-                    codeExecutor.execute();
-                } else {
-                    codeExecutor.execute();
-                }
-                refreshTable();
-            }
-        });
+        executeCodeButton.addActionListener(new CodeExecuteActionListener(this));
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                if (!isExecuting) {
+//                    isExecuting = true;
+//                    codeExecutor = new CodeExecutor(getCode(), robot,  (MainFieldFrame)SwingUtilities.getRoot(executeCodeButton));
+//                    setCodePaneNotEditable();
+//                    execute();
+//                } else {
+//                    execute();
+//                }
+//                refreshTable();
+//            }
+//        });
 
         stopExecuteCodeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                isExecuting = false;
+                CodeExecuteActionListener.isExecuting = false;
                 field.setRobotColumn(0);
                 field.setRobotRow(0);
                 setCodePaneEditable();
+                robot.setDirection(Robot.Direction.SOUTH);
+                robot.setChangedDirection(true);
                 refreshTable();
             }
         });
@@ -222,24 +238,33 @@ public class MainFieldFrame extends JFrame {
         return field;
     }
 
-    //scale picture
-    public void scaleRobotImage() {
-        BufferedImage bi = new BufferedImage(robotImage.getIconWidth(), robotImage.getIconHeight(), BufferedImage.TYPE_INT_ARGB);
-        Graphics g = bi.createGraphics();
-        if (columnWidth > 0) {
-            g.drawImage(robotImage.getImage(), 0, 0, columnWidth, rowHeight, null);
-            Image scaledRobotImage = robotImage.getImage().getScaledInstance(columnWidth, rowHeight, Image.SCALE_SMOOTH);
-            ImageIcon scaledRobot = new ImageIcon(scaledRobotImage);
-            label = new JLabel(scaledRobot);
-        }
-    }
-
     public void refreshTable() {
         rowHeight = (this.getHeight() - upHeight - CONST) / rowCount;
         if(rowHeight > 1) {
             columnWidth = ((this.getHeight() - codeScrollPane.getWidth()) / columnCount);
             table.setRowHeight(rowHeight);
         }
+        if (robot.hasChangedDirection()) {
+            robot.setChangedDirection(false);
+            int direction = 0;
+            switch (robot.getDirection()) {
+                case NORTH:
+                    direction = ImageWorker.NORTH;
+                    break;
+                case SOUTH:
+                    direction = ImageWorker.SOUTH;
+                    break;
+                case WEST:
+                    direction = ImageWorker.WEST;
+                    break;
+                case EAST:
+                    direction = ImageWorker.EAST;
+                    break;
+            }
+            robotImage = new ImageIcon(ImageWorker.ROBOT_IMAGES[direction]);
+            label = ImageWorker.scaleRobotImage(robotImage, columnWidth, rowHeight);
+        }
+
     }
 
     public String getCode() {
@@ -257,6 +282,5 @@ public class MainFieldFrame extends JFrame {
     public static void main(String[] args) {
         final MainFieldFrame frame = new MainFieldFrame(5, 5);
     }
-
 
 }

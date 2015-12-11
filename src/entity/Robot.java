@@ -1,4 +1,4 @@
-package entities;
+package entity;
 
 /**
  * Created by User on 24.10.2015.
@@ -6,9 +6,19 @@ package entities;
 public class Robot {
     private Field field;
 
+    private boolean changedDirection = false;
+
     public enum Direction {NORTH, SOUTH, WEST, EAST}
 
     private Direction direction = Direction.SOUTH;
+
+    public boolean hasChangedDirection() {
+        return changedDirection;
+    }
+
+    public void setChangedDirection(boolean changedDirection) {
+        this.changedDirection = changedDirection;
+    }
 
     public Robot(Field field) {
         this.field = field;
@@ -41,6 +51,7 @@ public class Robot {
     }
 
     public void turnLeft() {
+        changedDirection = true;
         switch (direction) {
             case NORTH:
                 direction = Direction.WEST;
@@ -58,6 +69,7 @@ public class Robot {
     }
 
     public void turnRight() {
+        changedDirection = true;
         switch (direction) {
             case NORTH:
                 direction = Direction.EAST;
@@ -84,4 +96,7 @@ public class Robot {
         return direction;
     }
 
+    public void setDirection(Direction direction) {
+        this.direction = direction;
+    }
 }

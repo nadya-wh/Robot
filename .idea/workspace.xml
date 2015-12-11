@@ -2,33 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a1d2eaf-52e6-440e-9c48-16487967851d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/entities/CodeExecutor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/ExecuteButtonCreator$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/ExecuteButtonCreator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/frame_manager/ExecuteButtonCreator.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/MyTest.class" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/MyTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/entities/Field.class" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/entities/Field.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/entities/Robot$1.class" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/entities/Robot$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/entities/Robot$Direction.class" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/entities/Robot$Direction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/entities/Robot.class" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/entities/Robot.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/frame_manager/ImageWorker.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/entities/Field.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/entities/Robot$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/entities/Robot$Direction.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/entities/Robot.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MainFieldFrame$5.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/2.png" afterPath="$PROJECT_DIR$/res/2.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/icon.png" afterPath="$PROJECT_DIR$/res/icon.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/image.gif" afterPath="$PROJECT_DIR$/res/image.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/play.png" afterPath="$PROJECT_DIR$/res/play.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/robot.jpg" afterPath="$PROJECT_DIR$/res/robot.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/run_icon.png" afterPath="$PROJECT_DIR$/res/run_icon.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/entities/Field.java" afterPath="$PROJECT_DIR$/src/entity/Field.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/entities/Robot.java" afterPath="$PROJECT_DIR$/src/entity/Robot.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/stop.png" afterPath="$PROJECT_DIR$/res/stop.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MainFieldFrame$1.class" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MainFieldFrame$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MainFieldFrame$2.class" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MainFieldFrame$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MainFieldFrame$3.class" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MainFieldFrame$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MainFieldFrame$4.class" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MainFieldFrame$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MainFieldFrame.class" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MainFieldFrame.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MenuCreator$1.class" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MenuCreator$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MenuCreator$2.class" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MenuCreator$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MenuCreator.class" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MenuCreator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/lexer_analyser/Lexer$LexerValues.class" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/lexer_analyser/Lexer$LexerValues.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/lexer_analyser/Lexer.class" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/lexer_analyser/Lexer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/lexer_analyser/Token.class" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/lexer_analyser/Token.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/node_parser/Node$NodeType.class" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/node_parser/Node$NodeType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/node_parser/Node.class" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/node_parser/Node.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/node_parser/NodeParser.class" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/node_parser/NodeParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/parser/Parser$1.class" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/parser/Parser$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/logic/CodeExecutor$1.class" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/logic/CodeExecutor$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/logic/CodeExecutor.class" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/logic/CodeExecutor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/parser/Parser.class" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/parser/Parser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frame_manager/MainFieldFrame.java" afterPath="$PROJECT_DIR$/src/frame_manager/MainFieldFrame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frame_manager/MenuCreator.java" afterPath="$PROJECT_DIR$/src/frame_manager/MenuCreator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lexer_analyser/Lexer.java" afterPath="$PROJECT_DIR$/src/lexer_analyser/Lexer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/CodeExecutor.java" afterPath="$PROJECT_DIR$/src/logic/CodeExecutor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/Parser.java" afterPath="$PROJECT_DIR$/src/parser/Parser.java" />
@@ -54,11 +56,74 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MyTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyTest.java">
+      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/parser/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+              <caret line="165" column="38" selection-start-line="165" selection-start-column="38" selection-end-line="165" selection-end-column="38" />
+              <folding>
+                <element signature="method#missStatement#0;class#Parser#0" expanded="false" />
+                <element signature="method#doBlock#0;class#Parser#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="robot.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/robot.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="robot_east.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/robot_east.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="robot_north.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/robot_north.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="robot_west.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/robot_west.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CodeExecutor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logic/CodeExecutor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="60" column="33" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NodeParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/node_parser/NodeParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+              <folding>
+                <element signature="method#statement#0;class#NodeParser#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageWorker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/frame_manager/ImageWorker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -68,101 +133,27 @@
         <entry file="file://$PROJECT_DIR$/src/frame_manager/MainFieldFrame.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="244" column="4" selection-start-line="244" selection-start-column="4" selection-end-line="244" selection-end-column="4" />
+              <caret line="199" column="55" selection-start-line="199" selection-start-column="48" selection-end-line="199" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#MainFieldFrame#0;class#MainFieldFrame#0" expanded="false" />
                 <element signature="method#MainFieldFrame#1;class#MainFieldFrame#0" expanded="false" />
-                <element signature="method#createUI#0;class#MainFieldFrame#0" expanded="false" />
-                <element signature="method#createTable#0;class#MainFieldFrame#0" expanded="false" />
+                <element signature="method#getColumnClass#0;class#3249:4258" expanded="false" />
+                <element signature="class#4513:5253" expanded="false" />
                 <element signature="method#createCodePane#0;class#MainFieldFrame#0" expanded="false" />
-                <element signature="method#createButtonPanel#0;class#MainFieldFrame#0" expanded="false" />
                 <element signature="method#makeBeautifulButton#0;class#MainFieldFrame#0" expanded="false" />
-                <element signature="method#scaleRobotImage#0;class#MainFieldFrame#0" expanded="false" />
                 <element signature="method#refreshTable#0;class#MainFieldFrame#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lexer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lexer_analyser/Lexer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="84" selection-start-line="48" selection-start-column="84" selection-end-line="48" selection-end-column="84" />
-              <folding>
-                <element signature="method#hasNextChar#0;class#Lexer#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CodeExecutor.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/logic/CodeExecutor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8095238">
-              <caret line="62" column="31" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/parser/Parser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-              <folding>
-                <element signature="method#idToken#0;class#Parser#0" expanded="false" />
-                <element signature="method#countExpression#0;class#Parser#0" expanded="false" />
-                <element signature="method#doBlock#0;class#Parser#0" expanded="false" />
-                <element signature="method#countSimpleExpression#0;class#Parser#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuCreator.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MenuCreator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/frame_manager/MenuCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="19" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#createSaveMenu#0;class#MenuCreator#0" expanded="false" />
-                <element signature="method#createOpenMenu#0;class#MenuCreator#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Robot.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entities/Robot.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding>
-                <element signature="method#turnLeft#0;class#Robot#0" expanded="false" />
-                <element signature="method#turnRight#0;class#Robot#0" expanded="false" />
-                <element signature="method#coordinatesAreValid#0;class#Robot#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Field.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entities/Field.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
-              <folding>
-                <element signature="method#setEmpty#0;class#Field#0" expanded="false" />
-                <element signature="e#1306#1307#0" expanded="true" />
-                <element signature="method#write#0;class#Field#0" expanded="false" />
-                <element signature="method#read#0;class#Field#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.59302324">
+              <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -204,15 +195,20 @@
         <option value="$PROJECT_DIR$/src/frame_manager/Field.java" />
         <option value="$PROJECT_DIR$/src/Parser.java" />
         <option value="$PROJECT_DIR$/src/entities/Field.java" />
-        <option value="$PROJECT_DIR$/src/entities/Robot.java" />
-        <option value="$PROJECT_DIR$/src/frame_manager/MenuCreator.java" />
         <option value="$PROJECT_DIR$/src/frame_manager/UICreator.java" />
         <option value="$PROJECT_DIR$/src/frame_manager/TableCreator.java" />
         <option value="$PROJECT_DIR$/src/frame_manager/ExecuteButtonCreator.java" />
+        <option value="$PROJECT_DIR$/src/frame_manager/TableAction.java" />
+        <option value="$PROJECT_DIR$/src/entities/Robot.java" />
         <option value="$PROJECT_DIR$/src/lexer_analyser/Lexer.java" />
         <option value="$PROJECT_DIR$/src/logic/CodeExecutor.java" />
-        <option value="$PROJECT_DIR$/src/parser/Parser.java" />
+        <option value="$PROJECT_DIR$/src/util/ResizeAdapter.java" />
         <option value="$PROJECT_DIR$/src/frame_manager/MainFieldFrame.java" />
+        <option value="$PROJECT_DIR$/src/parser/Parser.java" />
+        <option value="$PROJECT_DIR$/src/listener/CodeExecuteActionListener.java" />
+        <option value="$PROJECT_DIR$/src/exception/CodeExecutionException.java" />
+        <option value="$PROJECT_DIR$/src/frame_manager/ImageWorker.java" />
+        <option value="$PROJECT_DIR$/src/frame_manager/MenuCreator.java" />
       </list>
     </option>
   </component>
@@ -259,6 +255,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -288,6 +285,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RobotExecutor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RobotExecutor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -359,6 +374,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="listener" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RobotExecutor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RobotExecutor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="lexer_analyser" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -381,11 +414,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RobotExecutor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RobotExecutor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exception" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RobotExecutor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RobotExecutor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -400,19 +468,19 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.customizations" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Labs/5sem/РИПС/RIPS05ClientServer" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Dropbox\RobotExecutor\res" />
       <recent name="C:\Users\User\Dropbox\RobotExecutor" />
       <recent name="C:\Users\User\Dropbox\RobotExecutor\src" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\Dropbox\RobotExecutor" />
       <recent name="C:\Users\User\Dropbox\RobotExecutor\src" />
     </key>
@@ -885,8 +953,8 @@
     <recent_temporary>
       <list size="3">
         <item index="0" class="java.lang.String" itemvalue="Application.MainFieldFrame" />
-        <item index="1" class="java.lang.String" itemvalue="Application.MyTest" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Lexer" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Lexer" />
+        <item index="2" class="java.lang.String" itemvalue="Application.MyTest" />
       </list>
     </recent_temporary>
   </component>
@@ -906,12 +974,22 @@
       <workItem from="1447084961341" duration="103000" />
       <workItem from="1447605401684" duration="593000" />
       <workItem from="1447861171379" duration="21000" />
-      <workItem from="1447867206542" duration="218000" />
+      <workItem from="1447867206542" duration="4690000" />
+      <workItem from="1447881586782" duration="70000" />
+      <workItem from="1447919572789" duration="89000" />
+      <workItem from="1447939884537" duration="876000" />
+      <workItem from="1448021734277" duration="17000" />
+      <workItem from="1448352132939" duration="749000" />
+      <workItem from="1448880945699" duration="5694000" />
+      <workItem from="1449138370871" duration="148000" />
+      <workItem from="1449143038340" duration="25000" />
+      <workItem from="1449779842100" duration="804000" />
+      <workItem from="1449782704253" duration="909000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10992000" />
+    <option name="totallyTimeSpent" value="24845000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -923,26 +1001,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952693" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4495114" sideWeight="0.37897125" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36867863" sideWeight="0.49394855" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30228758" sideWeight="0.6210287" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.251634" sideWeight="0.6210287" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20499243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21255673" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47058824" sideWeight="0.49092284" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45751634" sideWeight="0.49092284" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -953,28 +1031,29 @@
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952693" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4502447" sideWeight="0.37897125" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4495114" sideWeight="0.37897125" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3425775" sideWeight="0.49394855" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2985318" sideWeight="0.6210287" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36867863" sideWeight="0.49394855" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30228758" sideWeight="0.6210287" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22163388" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20499243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32789558" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47145188" sideWeight="0.49092284" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47058824" sideWeight="0.49092284" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1022,16 +1101,64 @@
           <option name="timeStamp" value="72" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/frame_manager/MainFieldFrame.java</url>
-          <line>188</line>
+          <url>file://$PROJECT_DIR$/src/logic/CodeExecutor.java</url>
+          <line>47</line>
           <properties />
-          <option name="timeStamp" value="82" />
+          <option name="timeStamp" value="87" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/logic/CodeExecutor.java</url>
-          <line>27</line>
+          <line>57</line>
           <properties />
-          <option name="timeStamp" value="86" />
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/logic/CodeExecutor.java</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/logic/CodeExecutor.java</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/parser/Parser.java</url>
+          <line>158</line>
+          <properties />
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/parser/Parser.java</url>
+          <line>98</line>
+          <properties />
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/listener/CodeExecuteActionListener.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/listener/CodeExecuteActionListener.java</url>
+          <line>24</line>
+          <properties />
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/parser/Parser.java</url>
+          <line>164</line>
+          <properties />
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/node_parser/NodeParser.java</url>
+          <line>82</line>
+          <properties />
+          <option name="timeStamp" value="104" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/frame_manager/MenuCreator.java</url>
@@ -1039,21 +1166,20 @@
           <properties />
           <option name="timeStamp" value="56" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/node_parser/NodeParser.java</url>
+          <line>81</line>
+          <properties class="node_parser.NodeParser" method="getParenthesisExpression" />
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="87" />
+      <option name="time" value="105" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="field.getRobotRow()" language="JAVA" custom="" />
-        <watch expression="field.getRobotColumn()" language="JAVA" custom="" />
-        <watch expression="rowHeight" language="JAVA" custom="" />
-        <watch expression="columnHeight" language="JAVA" custom="" />
-        <watch expression="table.getHeight()" language="JAVA" custom="" />
-        <watch expression="table.getWidth()" language="JAVA" custom="" />
-        <watch expression="tableScrollPane.getWidth()" language="JAVA" custom="" />
-        <watch expression="table.getHeight()" language="JAVA" custom="" />
-        <watch expression="lexer" language="JAVA" custom="" />
-        <watch expression="getCode()" language="JAVA" custom="" />
+        <watch expression="lexer.token" language="JAVA" custom="" />
+        <watch expression="isExecuting" language="JAVA" custom="" />
+        <watch expression="ids" language="JAVA" custom="" />
       </configuration>
     </watches-manager>
   </component>
@@ -1062,144 +1188,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/entities/Robot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <element signature="method#turnLeft#0;class#Robot#0" expanded="false" />
-            <element signature="method#turnRight#0;class#Robot#0" expanded="false" />
-            <element signature="method#coordinatesAreValid#0;class#Robot#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
-          <folding>
-            <element signature="method#setEmpty#0;class#Field#0" expanded="false" />
-            <element signature="e#1306#1307#0" expanded="true" />
-            <element signature="method#write#0;class#Field#0" expanded="false" />
-            <element signature="method#read#0;class#Field#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
-          <folding>
-            <element signature="method#setEmpty#0;class#Field#0" expanded="false" />
-            <element signature="e#1306#1307#0" expanded="true" />
-            <element signature="method#write#0;class#Field#0" expanded="false" />
-            <element signature="method#read#0;class#Field#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame_manager/MainFieldFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#MainFieldFrame#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#MainFieldFrame#1;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#createUI#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#createTable#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#createCodePane#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#createButtonPanel#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#makeBeautifulButton#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#scaleRobotImage#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#refreshTable#0;class#MainFieldFrame#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame_manager/MenuCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#createSaveMenu#0;class#MenuCreator#0" expanded="false" />
-            <element signature="method#createOpenMenu#0;class#MenuCreator#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/Robot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding>
-            <element signature="method#turnLeft#0;class#Robot#0" expanded="false" />
-            <element signature="method#turnRight#0;class#Robot#0" expanded="false" />
-            <element signature="method#coordinatesAreValid#0;class#Robot#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
-          <folding>
-            <element signature="method#setEmpty#0;class#Field#0" expanded="false" />
-            <element signature="e#1306#1307#0" expanded="true" />
-            <element signature="method#write#0;class#Field#0" expanded="false" />
-            <element signature="method#read#0;class#Field#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame_manager/MainFieldFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="110" column="5" selection-start-line="110" selection-start-column="5" selection-end-line="110" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#MainFieldFrame#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#MainFieldFrame#1;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#createUI#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#createTable#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#createCodePane#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#createButtonPanel#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#makeBeautifulButton#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#scaleRobotImage#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#refreshTable#0;class#MainFieldFrame#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/frame_manager/MenuCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#createSaveMenu#0;class#MenuCreator#0" expanded="false" />
-            <element signature="method#createOpenMenu#0;class#MenuCreator#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1207,13 +1200,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Лабы/3sem/zadanie5/src/Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -1235,7 +1221,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1247,12 +1232,10 @@
             <element signature="imports" expanded="true" />
             <element signature="method#MainFieldFrame#0;class#MainFieldFrame#0" expanded="false" />
             <element signature="method#MainFieldFrame#1;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#createUI#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#createTable#0;class#MainFieldFrame#0" expanded="false" />
+            <element signature="method#getColumnClass#0;class#3249:4258" expanded="false" />
+            <element signature="class#4513:5253" expanded="false" />
             <element signature="method#createCodePane#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#createButtonPanel#0;class#MainFieldFrame#0" expanded="false" />
             <element signature="method#makeBeautifulButton#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#scaleRobotImage#0;class#MainFieldFrame#0" expanded="false" />
             <element signature="method#refreshTable#0;class#MainFieldFrame#0" expanded="false" />
           </folding>
         </state>
@@ -1276,7 +1259,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1298,7 +1280,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1320,7 +1301,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1401,27 +1381,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lexer_analyser/Token.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Лабы/3sem/zadanie5/src/Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Лабы/3sem/zadanie5/src/Connector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5964912">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/src.zip!/java/awt/event/ActionListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1429,36 +1388,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/node_parser/NodeParser.java">
+    <entry file="file://$PROJECT_DIR$/src/entity/Field.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.31336406">
           <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame_manager/MainFieldFrame.java">
+    <entry file="file://$PROJECT_DIR$/res/2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/play.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/image.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/robot_south.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/run_icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lexer_analyser/Token.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="244" column="4" selection-start-line="244" selection-start-column="4" selection-end-line="244" selection-end-column="4" />
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#MainFieldFrame#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#MainFieldFrame#1;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#createUI#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#createTable#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#createCodePane#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#createButtonPanel#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#makeBeautifulButton#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#scaleRobotImage#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#refreshTable#0;class#MainFieldFrame#0" expanded="false" />
+            <element signature="e#1832#1833#0" expanded="true" />
+            <element signature="e#1860#1861#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1466,9 +1446,79 @@
     <entry file="file://$PROJECT_DIR$/src/lexer_analyser/Lexer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="84" selection-start-line="48" selection-start-column="84" selection-end-line="48" selection-end-column="84" />
+          <caret line="88" column="20" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/Robot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="10" />
           <folding>
-            <element signature="method#hasNextChar#0;class#Lexer#0" expanded="false" />
+            <element signature="method#move#0;class#Robot#0" expanded="false" />
+            <element signature="method#turnLeft#0;class#Robot#0" expanded="false" />
+            <element signature="method#turnRight#0;class#Robot#0" expanded="false" />
+            <element signature="method#coordinatesAreValid#0;class#Robot#0" expanded="false" />
+            <element signature="e#2504#2505#0" expanded="true" />
+            <element signature="e#2546#2547#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/ResizeAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#345#346#0" expanded="true" />
+            <element signature="e#379#380#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/listener/CodeExecuteActionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#471#472#0" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exception/CodeExecutionException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
+          <folding>
+            <element signature="e#263#264#0" expanded="true" />
+            <element signature="e#293#294#0" expanded="true" />
+            <element signature="e#363#364#0" expanded="true" />
+            <element signature="e#400#401#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/CodeExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="33" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/node_parser/NodeParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding>
+            <element signature="method#statement#0;class#NodeParser#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1476,65 +1526,64 @@
     <entry file="file://$PROJECT_DIR$/src/parser/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+          <caret line="165" column="38" selection-start-line="165" selection-start-column="38" selection-end-line="165" selection-end-column="38" />
           <folding>
-            <element signature="method#idToken#0;class#Parser#0" expanded="false" />
-            <element signature="method#countExpression#0;class#Parser#0" expanded="false" />
+            <element signature="method#missStatement#0;class#Parser#0" expanded="false" />
             <element signature="method#doBlock#0;class#Parser#0" expanded="false" />
-            <element signature="method#countSimpleExpression#0;class#Parser#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/play.png">
+    <entry file="file://$PROJECT_DIR$/res/robot.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/robot_east.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/robot_north.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/robot_west.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frame_manager/ImageWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frame_manager/MainFieldFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="199" column="55" selection-start-line="199" selection-start-column="48" selection-end-line="199" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#MainFieldFrame#0;class#MainFieldFrame#0" expanded="false" />
+            <element signature="method#MainFieldFrame#1;class#MainFieldFrame#0" expanded="false" />
+            <element signature="method#getColumnClass#0;class#3249:4258" expanded="false" />
+            <element signature="class#4513:5253" expanded="false" />
+            <element signature="method#createCodePane#0;class#MainFieldFrame#0" expanded="false" />
+            <element signature="method#makeBeautifulButton#0;class#MainFieldFrame#0" expanded="false" />
+            <element signature="method#refreshTable#0;class#MainFieldFrame#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/frame_manager/MenuCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#createSaveMenu#0;class#MenuCreator#0" expanded="false" />
-            <element signature="method#createOpenMenu#0;class#MenuCreator#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/Robot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <element signature="method#turnLeft#0;class#Robot#0" expanded="false" />
-            <element signature="method#turnRight#0;class#Robot#0" expanded="false" />
-            <element signature="method#coordinatesAreValid#0;class#Robot#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
-          <folding>
-            <element signature="method#setEmpty#0;class#Field#0" expanded="false" />
-            <element signature="e#1306#1307#0" expanded="true" />
-            <element signature="method#write#0;class#Field#0" expanded="false" />
-            <element signature="method#read#0;class#Field#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/CodeExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8095238">
-          <caret line="62" column="31" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.59302324">
+          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>

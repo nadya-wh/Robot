@@ -23,19 +23,17 @@ public class Parser {
             switch (lexer.getToken().getType()) {
                 case ID:
                 case NUM:
-                    if (command == null || command instanceof ExpressionCommand || command instanceof ConditionalCommand) {
+                    if (command == null || command instanceof ExpressionCommand) { //|| command instanceof ConditionalCommand
                         command = expressionCommand;
-                        if (step == 0) {
-                            expressionCommand.setFirstOperand(new Token(lexer.getToken().getValue(), lexer.getToken().getType()));
-                        } else if (step == 1) {
-                            expressionCommand.setSecondOperand(new Token(lexer.getToken().getValue(), lexer.getToken().getType()));
-                        } else if (step == 2) {
-                            expressionCommand.setThirdOperand(new Token(lexer.getToken().getValue(), lexer.getToken().getType()));
-                        }
+                        buildExpressionCommand(expressionCommand, step);
                         step++;
                     } else if (command instanceof OutputCommand) {
                         OutputCommand outputCommand = (OutputCommand) command;
                         outputCommand.setOperand(new Token(lexer.getToken().getValue(), lexer.getToken().getType()));
+                    } else if (command instanceof ConditionalCommand) {
+                        ExpressionCommand current = ((ConditionalCommand) command).getExpressionCommand();
+                        buildExpressionCommand(current, step);
+                        step++;
                     }
                     break;
                 case PLUS:
@@ -114,7 +112,7 @@ public class Parser {
             }
             lexer.nextToken();
         }
-        if (command!= null) {
+        if (command != null) {
             return command;
         }
         return expressionCommand;
@@ -126,6 +124,16 @@ public class Parser {
             conditionalCommand.addCommand(parse());
         }
         return command;
+    }
+
+    private void buildExpressionCommand(ExpressionCommand expressionCommand, int step) {
+        if (step == 0) {
+            expressionCommand.setFirstOperand(new Token(lexer.getToken().getValue(), lexer.getToken().getType()));
+        } else if (step == 1) {
+            expressionCommand.setSecondOperand(new Token(lexer.getToken().getValue(), lexer.getToken().getType()));
+        } else if (step == 2) {
+            expressionCommand.setThirdOperand(new Token(lexer.getToken().getValue(), lexer.getToken().getType()));
+        }
     }
 
 

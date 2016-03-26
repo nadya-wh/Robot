@@ -7,96 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a1d2eaf-52e6-440e-9c48-16487967851d" name="Default" comment="Added new frame, which appears at the beginning (for choosing number of rows and columns).">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/action/CodeExecuteActionListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/entity/Field.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/entity/Robot$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/entity/Robot$Direction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/entity/Robot.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/exception/CodeExecutionException.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/frame_manager/ChooseFieldSizeFrame.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/frame_manager/ImageWorker.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/frame_manager/MainFieldFrame$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/frame_manager/MainFieldFrame$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/frame_manager/MainFieldFrame$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/frame_manager/MainFieldFrame$4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/frame_manager/MainFieldFrame.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/frame_manager/MenuCreator$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/frame_manager/MenuCreator$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/frame_manager/MenuCreator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/lexer/Lexer$LexerValues.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/lexer/Lexer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/lexer/Token.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/main/Main.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/main/MyTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/node_parser/Node$NodeType.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/node_parser/Node.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/node_parser/NodeParser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/parser/Parser$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/parser/Parser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/RobotExecutor/com/polovtseva/robot_executor/util/ResizeAdapter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/polovtseva/robot_executor/action/Interpreter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/polovtseva/robot_executor/entity/Field.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/polovtseva/robot_executor/logic/OutputCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/polovtseva/robot_executor/main/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/polovtseva/robot_executor/main/MyTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/MyTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/entity/Field.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/entity/Robot$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/entity/Robot$Direction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/entity/Robot.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/exception/CodeExecutionException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/ChooseFieldSizeFrame.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/ImageWorker.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MainFieldFrame$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MainFieldFrame$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MainFieldFrame$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MainFieldFrame$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MainFieldFrame.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MenuCreator$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MenuCreator$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/frame_manager/MenuCreator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/lexer_analyser/Lexer$LexerValues.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/lexer_analyser/Lexer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/lexer_analyser/Token.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/listener/CodeExecuteActionListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/logic/CodeExecutor$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/logic/CodeExecutor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/node_parser/Node$NodeType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/node_parser/Node.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/node_parser/NodeParser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/parser/Parser$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/parser/Parser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RobotExecutor/util/ResizeAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MyTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/entity/Field.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/logic/CodeExecutor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/node_parser/NodeParser.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/2.png" afterPath="$PROJECT_DIR$/src/res/2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/icon.png" afterPath="$PROJECT_DIR$/src/res/icon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/image.gif" afterPath="$PROJECT_DIR$/src/res/image.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/play.png" afterPath="$PROJECT_DIR$/src/res/play.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/robot.jpg" afterPath="$PROJECT_DIR$/src/res/robot.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/robot_east.jpg" afterPath="$PROJECT_DIR$/src/res/robot_east.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/robot_north.jpg" afterPath="$PROJECT_DIR$/src/res/robot_north.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/robot_north.png" afterPath="$PROJECT_DIR$/src/res/robot_north.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/robot_south.jpg" afterPath="$PROJECT_DIR$/src/res/robot_south.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/robot_west.jpg" afterPath="$PROJECT_DIR$/src/res/robot_west.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/run_icon.png" afterPath="$PROJECT_DIR$/src/res/run_icon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/stop.png" afterPath="$PROJECT_DIR$/src/res/stop.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/entity/Robot.java" afterPath="$PROJECT_DIR$/src/com/polovtseva/robot_executor/entity/Robot.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/exception/CodeExecutionException.java" afterPath="$PROJECT_DIR$/src/com/polovtseva/robot_executor/exception/CodeExecutionException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/frame_manager/ChooseFieldSizeFrame.java" afterPath="$PROJECT_DIR$/src/com/polovtseva/robot_executor/view/ChooseFieldSizeFrame.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/frame_manager/ImageWorker.java" afterPath="$PROJECT_DIR$/src/com/polovtseva/robot_executor/view/ImageWorker.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/frame_manager/MainFieldFrame.java" afterPath="$PROJECT_DIR$/src/com/polovtseva/robot_executor/view/MainFieldFrame.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/frame_manager/MenuCreator.java" afterPath="$PROJECT_DIR$/src/com/polovtseva/robot_executor/view/MenuCreator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/lexer_analyser/Lexer.java" afterPath="$PROJECT_DIR$/src/com/polovtseva/robot_executor/logic/Lexer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/lexer_analyser/Token.java" afterPath="$PROJECT_DIR$/src/com/polovtseva/robot_executor/entity/Token.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/listener/CodeExecuteActionListener.java" afterPath="$PROJECT_DIR$/src/com/polovtseva/robot_executor/action/CodeExecuteActionListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/node_parser/Node.java" afterPath="$PROJECT_DIR$/src/com/polovtseva/robot_executor/entity/Node.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parser/Parser.java" afterPath="$PROJECT_DIR$/src/com/polovtseva/robot_executor/parser/Parser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/util/ResizeAdapter.java" afterPath="$PROJECT_DIR$/src/com/polovtseva/robot_executor/util/ResizeAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/RobotExecutor_jar/RobotExecutor.jar" afterPath="$PROJECT_DIR$/out/artifacts/RobotExecutor_jar/RobotExecutor.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/polovtseva/robot_executor/parser/Parser.java" afterPath="$PROJECT_DIR$/src/com/polovtseva/robot_executor/parser/Parser.java" />
     </list>
     <ignored path="RobotExecutor.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -123,9 +36,8 @@
         <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/view/MainFieldFrame.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="176" column="21" selection-start-line="176" selection-start-column="13" selection-end-line="176" selection-end-column="21" />
+              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
               <folding>
-                <element signature="method#createUI#0;class#MainFieldFrame#0" expanded="false" />
                 <element signature="method#createCodePane#0;class#MainFieldFrame#0" expanded="false" />
                 <element signature="method#makeBeautifulButton#0;class#MainFieldFrame#0" expanded="false" />
               </folding>
@@ -139,50 +51,50 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding>
-                <element signature="method#error#0;class#Interpreter#0" expanded="false" />
+                <element signature="e#1335#1438#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExpressionCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/logic/ExpressionCommand.java">
+      <file leaf-file-name="CodeExecuteActionListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/action/CodeExecuteActionListener.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/main/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="23" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="23" />
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/controller/Controller.java">
+      <file leaf-file-name="MenuCreator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/view/MenuCreator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="57" column="2" selection-start-line="57" selection-start-column="2" selection-end-line="57" selection-end-column="2" />
+              <caret line="80" column="17" selection-start-line="62" selection-start-column="16" selection-end-line="80" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/parser/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.5188355">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Lexer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/logic/Lexer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <element signature="e#637#638#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -197,23 +109,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConditionalCommand.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ConditionalCommand.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/logic/ConditionalCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.68865436">
+              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Token.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/entity/Token.java">
+      <file leaf-file-name="ExpressionCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/logic/ExpressionCommand.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -298,9 +208,9 @@
         <option value="$PROJECT_DIR$/src/com/polovtseva/robot_executor/action/Interpreter.java" />
         <option value="$PROJECT_DIR$/src/com/polovtseva/robot_executor/logic/OutputCommand.java" />
         <option value="$PROJECT_DIR$/src/com/polovtseva/robot_executor/action/ExpressionAction.java" />
-        <option value="$PROJECT_DIR$/src/com/polovtseva/robot_executor/view/ChooseFieldSizeFrame.java" />
         <option value="$PROJECT_DIR$/src/com/polovtseva/robot_executor/controller/Controller.java" />
         <option value="$PROJECT_DIR$/src/com/polovtseva/robot_executor/view/MainFieldFrame.java" />
+        <option value="$PROJECT_DIR$/src/com/polovtseva/robot_executor/view/ChooseFieldSizeFrame.java" />
         <option value="$PROJECT_DIR$/src/com/polovtseva/robot_executor/parser/Parser.java" />
       </list>
     </option>
@@ -318,10 +228,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="683" />
+    <option name="width" value="683" />
+    <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -348,6 +257,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -554,9 +464,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1161,12 +1070,17 @@
       <workItem from="1457453092807" duration="786000" />
       <workItem from="1457767423068" duration="4111000" />
       <workItem from="1457772379479" duration="1372000" />
-      <workItem from="1457778444009" duration="445000" />
+      <workItem from="1457778444009" duration="1217000" />
+      <workItem from="1457782693751" duration="1025000" />
+      <workItem from="1457980331888" duration="947000" />
+      <workItem from="1457981721520" duration="17000" />
+      <workItem from="1458458338281" duration="1869000" />
+      <workItem from="1459007622714" duration="2899000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80483000" />
+    <option name="totallyTimeSpent" value="88012000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1178,8 +1092,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
-    <editor active="true" />
+    <frame x="683" y="0" width="683" height="728" extended-state="1" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1188,16 +1102,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37908497" sideWeight="0.4387292" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.60195756" sideWeight="0.49394855" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30882353" sideWeight="0.6210287" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31711408" sideWeight="0.6210287" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23373677" sideWeight="0.49126637" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49117175" sideWeight="0.49126637" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21255673" sideWeight="0.50873363" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41503268" sideWeight="0.5612708" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38562092" sideWeight="0.5612708" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1287,6 +1201,12 @@
           <properties />
           <option name="timeStamp" value="126" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/parser/Parser.java</url>
+          <line>17</line>
+          <properties />
+          <option name="timeStamp" value="164" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/view/MenuCreator.java</url>
           <line>36</line>
@@ -1294,15 +1214,14 @@
           <option name="timeStamp" value="56" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="160" />
+      <option name="time" value="165" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="expressionCommand.getSecondOperand().getValue()" language="JAVA" custom="" />
-        <watch expression="table" language="JAVA" custom="" />
-        <watch expression="logScrollPane.getHeight()" language="JAVA" custom="" />
-        <watch expression="logArea.getHeight()" language="JAVA" custom="" />
-        <watch expression="Token.SYMBOLS" language="JAVA" custom="" />
+        <watch expression="getCommands()" language="JAVA" custom="" />
+        <watch expression="getExpressionCommand()" language="JAVA" custom="" />
+        <watch expression="command" language="JAVA" custom="" />
+        <watch expression="result" language="JAVA" custom="" />
       </configuration>
     </watches-manager>
   </component>
@@ -1411,14 +1330,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="298" column="0" selection-start-line="298" selection-start-column="0" selection-end-line="298" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/view/MenuCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="67" column="56" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1531,19 +1442,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/view/ImageWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.24810126">
-          <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/logic/ExpressionType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1551,7 +1453,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1559,17 +1460,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/logic/Lexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1577,27 +1467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/action/CodeExecuteActionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/view/ChooseFieldSizeFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1605,7 +1474,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="23" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="23" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/view/ChooseFieldSizeFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1887#1888#0" expanded="false" />
+            <element signature="e#1921#1922#0" expanded="false" />
+            <element signature="e#1953#1954#0" expanded="false" />
+            <element signature="e#1984#1985#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1617,24 +1499,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/view/MainFieldFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/view/ImageWorker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="176" column="21" selection-start-line="176" selection-start-column="13" selection-end-line="176" selection-end-column="21" />
+          <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
           <folding>
-            <element signature="method#createUI#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#createCodePane#0;class#MainFieldFrame#0" expanded="false" />
-            <element signature="method#makeBeautifulButton#0;class#MainFieldFrame#0" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/logic/ExpressionCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/entity/Token.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2000#2001#0" expanded="false" />
+            <element signature="e#2032#2033#0" expanded="false" />
+            <element signature="e#2220#2221#0" expanded="false" />
+            <element signature="e#2248#2249#0" expanded="false" />
+            <element signature="e#2289#2290#0" expanded="false" />
+            <element signature="e#2316#2317#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1647,20 +1533,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/action/Interpreter.java">
+    <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/view/MenuCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <caret line="80" column="17" selection-start-line="62" selection-start-column="16" selection-end-line="80" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/view/MainFieldFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
           <folding>
-            <element signature="method#error#0;class#Interpreter#0" expanded="false" />
+            <element signature="method#createCodePane#0;class#MainFieldFrame#0" expanded="false" />
+            <element signature="method#makeBeautifulButton#0;class#MainFieldFrame#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/entity/Token.java">
+    <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/action/CodeExecuteActionListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1673,20 +1568,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/logic/ConditionalCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/logic/Lexer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#637#638#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/logic/ExpressionCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/parser/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5188355">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/action/Interpreter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="e#1335#1438#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/polovtseva/robot_executor/logic/ConditionalCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68865436">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -1,8 +1,8 @@
 package com.polovtseva.robot_executor.action;
 
 import com.polovtseva.robot_executor.controller.Controller;
-import com.polovtseva.robot_executor.logic.ExpressionCommand;
-import com.polovtseva.robot_executor.logic.Lexer;
+import com.polovtseva.robot_executor.command.ExpressionCommand;
+import com.polovtseva.robot_executor.command.Lexer;
 import com.polovtseva.robot_executor.entity.Token;
 import com.polovtseva.robot_executor.exception.CodeExecutionException;
 
@@ -19,7 +19,7 @@ public class ExpressionAction {
     a = b + 5
     a = 5 + b
      */
-    public static void countEqualExpression(ExpressionCommand expressionCommand, HashMap<Integer, Integer> ids) throws CodeExecutionException {
+    public static void countAssignmentExpression(ExpressionCommand expressionCommand, HashMap<Integer, Integer> ids) throws CodeExecutionException {
         if (expressionCommand.getThirdOperand() != null) {
             int firstOp = takeOperandValue(expressionCommand.getSecondOperand(), ids);
             int secOp = takeOperandValue(expressionCommand.getThirdOperand(), ids);
@@ -85,6 +85,11 @@ public class ExpressionAction {
                 firstOp = takeOperandValue(expressionCommand.getFirstOperand(), ids);
                 secondOp = takeOperandValue(expressionCommand.getSecondOperand(), ids);
                 return firstOp < secondOp;
+            case EQUAL:
+                firstOp = takeOperandValue(expressionCommand.getFirstOperand(), ids);
+                secondOp = takeOperandValue(expressionCommand.getSecondOperand(), ids);
+                return firstOp == secondOp;
+
         }
         return false; // TODO: 27.01.2016  
     }

@@ -1,4 +1,4 @@
-package com.polovtseva.robot_executor.logic;
+package com.polovtseva.robot_executor.command;
 
 import com.polovtseva.robot_executor.action.ExpressionAction;
 import com.polovtseva.robot_executor.entity.Robot;
@@ -17,7 +17,7 @@ public class ConditionalCommand implements Command {
 
     public ConditionalCommand(CommandType commandType) {
         this.commandType = commandType;
-        commands = new ArrayList<Command>();
+        commands = new ArrayList<>();
     }
 
     public ConditionalCommand(ExpressionCommand expressionCommand, ArrayList<Command> commands, CommandType commandType) {
@@ -55,8 +55,8 @@ public class ConditionalCommand implements Command {
     }
 
     @Override
-    public boolean execute(HashMap<Integer, Integer> ids, Robot robot) throws CodeExecutionException {
-        boolean result = false;
+    public CommandResult execute(HashMap<Integer, Integer> ids, Robot robot) throws CodeExecutionException {
+        CommandResult result = CommandResult.FALSE;
         switch (getCommandType()) {
             case IF:
                 if (ExpressionAction.countBooleanExpression(getExpressionCommand(), ids)) {

@@ -21,8 +21,9 @@ public class ChooseFieldSizeFrame extends JDialog implements ActionListener {
     private int columnCount;
 
     public ChooseFieldSizeFrame() {
-        this.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
+        this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         this.setLayout(new BorderLayout());
+        this.setLocationRelativeTo(null);
         createUI();
         okButton.addActionListener(this);
     }
@@ -67,6 +68,7 @@ public class ChooseFieldSizeFrame extends JDialog implements ActionListener {
             if (rowCount < 21 && rowCount > 0 && columnCount < 21 && columnCount > 0) {
                 //MainFieldFrame frame = new MainFieldFrame(rowCount, columnCount);
                 //frame.setVisible(true);
+
                 this.setVisible(false);
             } else {
                 JOptionPane.showMessageDialog(this, "Incorrect input. Values must be from 1 to 20.");

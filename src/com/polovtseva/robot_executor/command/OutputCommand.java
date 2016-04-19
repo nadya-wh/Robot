@@ -1,4 +1,4 @@
-package com.polovtseva.robot_executor.logic;
+package com.polovtseva.robot_executor.command;
 
 import com.polovtseva.robot_executor.action.ExpressionAction;
 import com.polovtseva.robot_executor.action.Interpreter;
@@ -23,10 +23,8 @@ public class OutputCommand implements Command {
     }
 
     @Override
-    public boolean execute(HashMap<Integer, Integer> ids, Robot robot) throws CodeExecutionException {
-        Interpreter.getFrame().getLogArea().append(String.valueOf(ExpressionAction.takeOperandValue(operand, ids)));
-
-
-        return true;
+    public CommandResult execute(HashMap<Integer, Integer> ids, Robot robot) throws CodeExecutionException {
+        Interpreter.getFrame().getLogPane().setText(Interpreter.getFrame().getLogPane().getText() + String.valueOf(ExpressionAction.takeOperandValue(operand, ids)));
+        return CommandResult.TRUE;
     }
 }

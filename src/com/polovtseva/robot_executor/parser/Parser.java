@@ -2,7 +2,7 @@ package com.polovtseva.robot_executor.parser;
 
 import com.polovtseva.robot_executor.entity.*;
 import com.polovtseva.robot_executor.exception.CodeExecutionException;
-import com.polovtseva.robot_executor.logic.*;
+import com.polovtseva.robot_executor.command.*;
 
 /**
  * Created by User on 20.10.2015.
@@ -37,34 +37,23 @@ public class Parser {
                     }
                     break;
                 case PLUS:
-                    expressionCommand.setOperation(Lexer.LexerValue.PLUS);
-                    break;
                 case MINUS:
-                    expressionCommand.setOperation(Lexer.LexerValue.MINUS);
+                    expressionCommand.setOperation(lexer.getToken().getType());
                     break;
                 case BIWISE_AND:
-                    expressionCommand.setOperation(Lexer.LexerValue.BIWISE_AND);
-                    break;
                 case BITWISE_OR:
-                    expressionCommand.setOperation(Lexer.LexerValue.BITWISE_OR);
+                    expressionCommand.setOperation(lexer.getToken().getType());
                     break;
                 case AND:
-                    expressionCommand.setOperation(Lexer.LexerValue.AND);
-                    expressionCommand.setType(ExpressionType.BOOLEAN_TYPE);
-                    break;
                 case OR:
-                    expressionCommand.setOperation(Lexer.LexerValue.OR);
-                    expressionCommand.setType(ExpressionType.BOOLEAN_TYPE);
-                    break;
-                case LESS:
-                    expressionCommand.setOperation(Lexer.LexerValue.LESS);
-                    expressionCommand.setType(ExpressionType.BOOLEAN_TYPE);
-                    break;
-                case MORE:
-                    expressionCommand.setOperation(Lexer.LexerValue.MORE);
-                    expressionCommand.setType(ExpressionType.BOOLEAN_TYPE);
-                    break;
                 case EQUAL:
+                case LESS:
+                case MORE:
+                    expressionCommand.setOperation(lexer.getToken().getType());
+                    expressionCommand.setType(ExpressionType.BOOLEAN_TYPE);
+                    break;
+
+                case VALUE_ASSIGNMENT:
                     expressionCommand.setType(ExpressionType.EQUAL);
                     break;
                 case CHECK:

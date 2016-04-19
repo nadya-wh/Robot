@@ -6,6 +6,8 @@ import com.polovtseva.robot_executor.entity.Robot;
 import com.polovtseva.robot_executor.view.ChooseFieldSizeFrame;
 import com.polovtseva.robot_executor.view.MainFieldFrame;
 
+import java.awt.*;
+
 /**
  * Created by User on 26.01.2016.
  */
@@ -50,7 +52,7 @@ public class Controller {
 
     public void init() {
         ChooseFieldSizeFrame frame = new ChooseFieldSizeFrame();
-        frame.setModal(true);
+        frame.setModalityType(Dialog.DEFAULT_MODALITY_TYPE);
         frame.setVisible(true);
         int rowCount = frame.getRowCount();
         int columnCount = frame.getColumnCount();

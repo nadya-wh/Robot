@@ -1,16 +1,14 @@
 package com.polovtseva.robot_executor.view;
 
-import com.polovtseva.robot_executor.action.Interpreter;
 import com.polovtseva.robot_executor.controller.Controller;
 import com.polovtseva.robot_executor.entity.*;
 import com.polovtseva.robot_executor.entity.Robot;
-import com.polovtseva.robot_executor.action.CodeExecuteActionListener;
-import com.polovtseva.robot_executor.exception.CodeExecutionException;
 import com.polovtseva.robot_executor.util.ResizeAdapter;
+import org.apache.log4j.Logger;
 
-import javax.management.relation.RoleNotFoundException;
 import javax.swing.*;
 import javax.swing.table.*;
+import javax.swing.text.*;
 import java.awt.*;
 import java.awt.event.*;
 
@@ -19,11 +17,15 @@ import java.awt.event.*;
  */
 public class MainFieldFrame extends JFrame {
 
+    private static final Logger LOG = Logger.getLogger(MainFieldFrame.class);
+
+    public static final int LOG_PANE_HEIGHT;
+
+    private static final DefaultStyledDocument document = new DefaultStyledDocument();
     private int rowHeight;
     private int columnWidth;
     private final int CONST = 95;
     private int upHeight;
-    private final int LOG_HEIGHT = 100;
 
     private ImageIcon robotImage;
     private JLabel label;
@@ -35,17 +37,24 @@ public class MainFieldFrame extends JFrame {
     private JScrollPane tableScrollPane;
     private JScrollPane codeScrollPane;
     private JScrollPane logScrollPane;
-    private JTextArea logArea;
+    private JTextPane logPane;
     private JPanel buttonPanel;
 
     public static int WIDTH;
     public static int HEIGHT;
 
+    static {
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        LOG_PANE_HEIGHT = screenSize.height / 4;
+        WIDTH = (int) screenSize.getWidth();
+        HEIGHT = (int) screenSize.getHeight() - 30;
+    }
+
     public MainFieldFrame() {
         createUI();
     }
 
-    public MainFieldFrame(Field field, String code) {
+    public MainFieldFrame(String code) {
         createUI();
         codePane.setText(code);
     }
@@ -70,6 +79,10 @@ public class MainFieldFrame extends JFrame {
         return codePane.getText();
     }
 
+    public void setCode(String code) {
+        codePane.setText(code);
+    }
+
     public void setCodePaneNotEditable() {
         codePane.setEditable(false);
     }
@@ -85,8 +98,7 @@ public class MainFieldFrame extends JFrame {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         createButtonPanel();
         upHeight = menuBar.getHeight() + buttonPanel.getHeight();
-        WIDTH = (int) screenSize.getWidth();
-        HEIGHT = (int) screenSize.getHeight() - buttonPanel.getHeight() - menuBar.getHeight() - 30;
+
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setLayout(new BorderLayout());
         createCodePane();
@@ -96,6 +108,7 @@ public class MainFieldFrame extends JFrame {
         //label = ImageWorker.scaleRobotImage(robotImage, columnWidth, rowHeight);
 
         createTable();
+        //table.setPreferredSize(new Dimension(tableScrollPane.getWidth(), tableScrollPane.getHeight()));
 
         GridBagConstraints c = new GridBagConstraints();
         c.fill = GridBagConstraints.BOTH;
@@ -129,6 +142,10 @@ public class MainFieldFrame extends JFrame {
                 } else {
                     component.setBackground(Color.GREEN);
                 }
+//                int rendererWidth = component.getPreferredSize().width;
+//                TableColumn tableColumn = getColumnModel().getColumn(columnIndex);
+//                tableColumn.setPreferredWidth(Math.max(rendererWidth + getIntercellSpacing().width, tableColumn.getPreferredWidth()));
+
                 return component;
             }
 
@@ -189,14 +206,15 @@ public class MainFieldFrame extends JFrame {
     }
 
     public void createLogPanel() {
-        logArea = new JTextArea();
-        logArea.setRows(5);
-        logScrollPane = new JScrollPane(logArea);
+        logPane = new JTextPane(document);
+        logScrollPane = new JScrollPane(logPane);
+        logScrollPane.setPreferredSize(new Dimension(this.getWidth(), LOG_PANE_HEIGHT));
     }
 
     public void createCodePane() {
         codePane = new JTextArea(5, 20);
-        codePane.setSize(100, 100);
+        codePane.setColumns(30);
+        codePane.setFont(new Font("Monospaced", Font.BOLD, 14));
         codeScrollPane = new JScrollPane(codePane);
     }
 
@@ -224,7 +242,15 @@ public class MainFieldFrame extends JFrame {
     }
 
     public void stopExecutingCode() {
-        logArea.append("\nThe program was finished.");
+        StyleContext context = new StyleContext();
+        Style style = context.addStyle("test", null);
+        StyleConstants.setForeground(style, Color.RED);
+        try {
+            document.insertString(0, "lal", style);
+        } catch (BadLocationException e) {
+            LOG.error(e);
+        }
+        logPane.setText(logPane.getText() + "The program has finished.\n");
         Field field = Controller.getInstance().getField();
         Robot robot = Controller.getInstance().getRobot();
         Controller.getInstance().setExecuting(false);
@@ -250,9 +276,9 @@ public class MainFieldFrame extends JFrame {
         Field field = Controller.getInstance().getField();
         rowHeight = (this.getHeight() - upHeight - CONST) / field.getRowCount();
         if (rowHeight > 1) {
+            //for robot image
             columnWidth = ((this.getHeight() - codeScrollPane.getWidth()) / field.getColumnCount());
             table.setRowHeight(rowHeight);
-
         }
 
         if (robot.hasChangedDirection()) {
@@ -278,7 +304,7 @@ public class MainFieldFrame extends JFrame {
 
     }
 
-    public JTextArea getLogArea() {
-        return logArea;
+    public JTextPane getLogPane() {
+        return logPane;
     }
 }

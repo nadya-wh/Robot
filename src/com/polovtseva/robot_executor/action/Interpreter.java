@@ -1,12 +1,11 @@
 package com.polovtseva.robot_executor.action;
 
-import com.polovtseva.robot_executor.logic.ConditionalCommand;
-import com.polovtseva.robot_executor.logic.ExpressionCommand;
+import com.polovtseva.robot_executor.command.CommandResult;
 import com.polovtseva.robot_executor.entity.Robot;
 import com.polovtseva.robot_executor.exception.CodeExecutionException;
-import com.polovtseva.robot_executor.logic.Command;
+import com.polovtseva.robot_executor.command.Command;
 import com.polovtseva.robot_executor.view.MainFieldFrame;
-import com.polovtseva.robot_executor.logic.Lexer;
+import com.polovtseva.robot_executor.command.Lexer;
 import com.polovtseva.robot_executor.parser.Parser;
 
 import javax.swing.*;
@@ -29,13 +28,17 @@ public class Interpreter {
         parser = new Parser(lexer);
         this.robot = robot;
         this.frame = frame;
-        ids = new HashMap<Integer, Integer>(ALPHABET_SIZE);
+        ids = new HashMap<>(ALPHABET_SIZE);
     }
 
 
     public boolean execute() throws CodeExecutionException {
         Command command = parser.parse();
-        return command.execute(ids, robot);
+        CommandResult result =  command.execute(ids, robot);
+        if (result == CommandResult.STOP) {
+            System.out.println(command);
+        }
+        return result != CommandResult.STOP;
     }
 
     public static MainFieldFrame getFrame() {
@@ -57,8 +60,8 @@ public class Interpreter {
 //                break;
 //            case EOF:
 //                return false; // TODO: 27.01.2016
-//            case EQUAL:
-//                ExpressionAction.countEqualExpression(expressionCommand, ids);
+//            case VALUE_ASSIGNMENT:
+//                ExpressionAction.countAssignmentExpression(expressionCommand, ids);
 //                break;
 //            case BOOLEAN_TYPE:
 //                ExpressionAction.countBooleanExpression(expressionCommand, ids);

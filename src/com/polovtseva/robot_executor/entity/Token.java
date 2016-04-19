@@ -1,6 +1,6 @@
 package com.polovtseva.robot_executor.entity;
 
-import com.polovtseva.robot_executor.logic.Lexer;
+import com.polovtseva.robot_executor.command.Lexer;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,11 +14,11 @@ public class Token implements Cloneable{
     public static final Map<String, Lexer.LexerValue> SYMBOLS;
     public static final Map<String, Lexer.LexerValue> WORDS;
     static {
-        SYMBOLS = new HashMap<String, Lexer.LexerValue>();
-        WORDS = new HashMap<String, Lexer.LexerValue>();
+        SYMBOLS = new HashMap<>();
+        WORDS = new HashMap<>();
         SYMBOLS.put("{", Lexer.LexerValue.LBRA);
         SYMBOLS.put("}", Lexer.LexerValue.RBRA);
-        SYMBOLS.put("=", Lexer.LexerValue.EQUAL);
+        SYMBOLS.put("=", Lexer.LexerValue.VALUE_ASSIGNMENT);
         SYMBOLS.put(";", Lexer.LexerValue.SEMICOLON);
         SYMBOLS.put("(", Lexer.LexerValue.LPAR);
         SYMBOLS.put(")", Lexer.LexerValue.RPAR);
@@ -39,6 +39,7 @@ public class Token implements Cloneable{
         WORDS.put("and", Lexer.LexerValue.AND);
         WORDS.put("or", Lexer.LexerValue.OR);
         WORDS.put("check", Lexer.LexerValue.CHECK);
+        WORDS.put("equals", Lexer.LexerValue.EQUAL);
         WORDS.put("write", Lexer.LexerValue.WRITE);
 
     }

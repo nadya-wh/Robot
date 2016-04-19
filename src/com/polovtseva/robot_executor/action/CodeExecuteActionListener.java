@@ -23,7 +23,7 @@ public class CodeExecuteActionListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         MainFieldFrame frame = Controller.getInstance().getFrame();
         if (!isExecuting) {
-            frame.getLogArea().append("\nThe program started.");
+            frame.getLogPane().setText(frame.getLogPane().getText() + "The program started.\n");
             isExecuting = true;
             interpreter = new Interpreter(frame.getCode(), Controller.getInstance().getRobot(), frame);
             frame.setCodePaneNotEditable();

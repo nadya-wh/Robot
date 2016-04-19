@@ -1,7 +1,7 @@
 package com.polovtseva.robot_executor.exception;
 
-import com.polovtseva.robot_executor.logic.ExpressionCommand;
-import com.polovtseva.robot_executor.logic.Lexer;
+import com.polovtseva.robot_executor.command.ExpressionCommand;
+import com.polovtseva.robot_executor.command.Lexer;
 import com.polovtseva.robot_executor.entity.Token;
 
 /**

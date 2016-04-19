@@ -1,5 +1,7 @@
 package com.polovtseva.robot_executor.entity;
 
+import com.polovtseva.robot_executor.controller.Controller;
+
 /**
  * Created by User on 24.10.2015.
  */
@@ -25,15 +27,18 @@ public class Robot {
     }
 
     public boolean move() {
+        System.out.println("Robot moved");
         int row = countNewRowIndex();
         int column = countNewColumnIndex();
         if (coordinatesAreValid(row, column) && !field.isMarked(row, column)) {
             field.setRobotColumn(column);
             field.setRobotRow(row);
+            Controller.getInstance().getFrame().refreshTable();
             return true;
         } else {
             return false;
         }
+
     }
 
     public void turnLeft() {

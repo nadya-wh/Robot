@@ -1,4 +1,4 @@
-package com.polovtseva.robot_executor.logic;
+package com.polovtseva.robot_executor.command;
 
 import com.polovtseva.robot_executor.entity.Token;
 import com.polovtseva.robot_executor.exception.CodeExecutionException;
@@ -14,8 +14,8 @@ public class Lexer {
 
     public enum LexerValue {
         NUM, ID, IF, ELSE, WHILE, DO, LBRA, RBRA, LPAR, RPAR, PLUS, MINUS, LESS,
-        EQUAL, SEMICOLON, EOF, MORE, TURN_RIGHT, TURN_LEFT, GO, NOT, AND, OR, CHECK, BIWISE_AND,
-        BITWISE_OR, WRITE
+        VALUE_ASSIGNMENT, SEMICOLON, EOF, MORE, TURN_RIGHT, TURN_LEFT, GO, NOT, AND, OR, CHECK, BIWISE_AND,
+        BITWISE_OR, WRITE, EQUAL
     }
 
 

@@ -1,4 +1,4 @@
-package com.polovtseva.robot_executor.logic;
+package com.polovtseva.robot_executor.command;
 
 import com.polovtseva.robot_executor.action.ExpressionAction;
 import com.polovtseva.robot_executor.entity.Robot;
@@ -61,7 +61,7 @@ public class ExpressionCommand implements Command {
     }
 
     @Override
-    public boolean execute(HashMap<Integer, Integer> ids, Robot robot) throws CodeExecutionException {
+    public CommandResult execute(HashMap<Integer, Integer> ids, Robot robot) throws CodeExecutionException {
         switch (getType()) {
             case GO:
                 if (!robot.move()) {
@@ -75,16 +75,16 @@ public class ExpressionCommand implements Command {
                 robot.turnRight();
                 break;
             case EOF:
-                return false; // TODO: 27.01.2016
+                return CommandResult.STOP; // TODO: 27.01.2016
             case EQUAL:
-                ExpressionAction.countEqualExpression(this, ids);
+                ExpressionAction.countAssignmentExpression(this, ids);
                 break;
             case BOOLEAN_TYPE:
                 ExpressionAction.countBooleanExpression(this, ids);
                 break;
             case CHECK:
-                return robot.check();
+                return robot.check() ? CommandResult.TRUE : CommandResult.FALSE;
         }
-        return true;
+        return CommandResult.TRUE;
     }
 }

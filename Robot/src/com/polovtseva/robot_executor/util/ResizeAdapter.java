@@ -20,7 +20,9 @@ public class ResizeAdapter extends ComponentAdapter {
     @Override
     public void componentResized(ComponentEvent e) {
         super.componentResized(e);
+        frame.resetPanes();
         frame.refreshTable();
         frame.setLabel(ImageWorker.scaleRobotImage(frame.getRobotImage(), frame.getColumnWidth(), frame.getRowHeight()));
+        frame.revalidate();
     }
 }

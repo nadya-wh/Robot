@@ -52,17 +52,17 @@ public class Controller {
     }
 
     public void init() {
-        ChooseFieldSizeFrame frame = new ChooseFieldSizeFrame();
-        RefineryUtilities.centerFrameOnScreen(frame);
-        frame.setModalityType(Dialog.DEFAULT_MODALITY_TYPE);
-        frame.pack();
-        frame.setResizable(false);
-        frame.setVisible(true);
-
-        int rowCount = frame.getRowCount();
-        int columnCount = frame.getColumnCount();
-//        int rowCount = 5;
-//        int columnCount = 5;
+//        ChooseFieldSizeFrame frame = new ChooseFieldSizeFrame();
+//        RefineryUtilities.centerFrameOnScreen(frame);
+//        frame.setModalityType(Dialog.DEFAULT_MODALITY_TYPE);
+//        frame.pack();
+//        frame.setResizable(false);
+//        frame.setVisible(true);
+//
+//        int rowCount = frame.getRowCount();
+//        int columnCount = frame.getColumnCount();
+        int rowCount = 5;
+        int columnCount = 5;
         if (rowCount > 0 && columnCount > 0) {
             field = new Field(rowCount, columnCount);
             robot = new Robot(field);

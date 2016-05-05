@@ -71,7 +71,8 @@ public class ExpressionAction {
         return value;
     }
 
-    public static boolean countBooleanExpression(ExpressionCommand expressionCommand, HashMap<Integer, Integer> ids) throws CodeExecutionException {
+    public static boolean countSimpleBooleanExpression(ExpressionCommand expressionCommand,
+                                                       HashMap<Integer, Integer> ids) throws CodeExecutionException {
         int firstOp = 0;
         int secondOp = 0;
         switch (expressionCommand.getOperation()) {
@@ -89,9 +90,10 @@ public class ExpressionAction {
                 firstOp = takeOperandValue(expressionCommand.getFirstOperand(), ids);
                 secondOp = takeOperandValue(expressionCommand.getSecondOperand(), ids);
                 return firstOp == secondOp;
+            default:
+                throw new CodeExecutionException("Not defined operation: " + expressionCommand.getOperation());
 
         }
-        return false; // TODO: 27.01.2016  
     }
 
 }

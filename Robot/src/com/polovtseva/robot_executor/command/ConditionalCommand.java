@@ -10,20 +10,22 @@ import java.util.HashMap;
 /**
  * Created by User on 27.01.2016.
  */
-public class ConditionalCommand implements Command {
+public class ConditionalCommand extends Command {
     private ExpressionCommand expressionCommand;
     private ArrayList<Command> commands;
-    private CommandType commandType;
+    private ConditionalCommandType conditionalCommandType;
 
-    public ConditionalCommand(CommandType commandType) {
-        this.commandType = commandType;
+    public ConditionalCommand(ConditionalCommandType conditionalCommandType) {
+        this.conditionalCommandType = conditionalCommandType;
         commands = new ArrayList<>();
+        this.commandEnum = CommandEnum.CONDITIONAL_COMMAND;
     }
 
-    public ConditionalCommand(ExpressionCommand expressionCommand, ArrayList<Command> commands, CommandType commandType) {
+    public ConditionalCommand(ExpressionCommand expressionCommand, ArrayList<Command> commands, ConditionalCommandType conditionalCommandType) {
         this.expressionCommand = expressionCommand;
         this.commands = commands;
-        this.commandType = commandType;
+        this.conditionalCommandType = conditionalCommandType;
+        this.commandEnum = CommandEnum.CONDITIONAL_COMMAND;
     }
 
     public ExpressionCommand getExpressionCommand() {
@@ -42,12 +44,12 @@ public class ConditionalCommand implements Command {
         this.commands = commands;
     }
 
-    public CommandType getCommandType() {
-        return commandType;
+    public ConditionalCommandType getConditionalCommandType() {
+        return conditionalCommandType;
     }
 
-    public void setCommandType(CommandType commandType) {
-        this.commandType = commandType;
+    public void setConditionalCommandType(ConditionalCommandType conditionalCommandType) {
+        this.conditionalCommandType = conditionalCommandType;
     }
 
     public void addCommand(Command command) {
@@ -57,9 +59,9 @@ public class ConditionalCommand implements Command {
     @Override
     public CommandResult execute(HashMap<Integer, Integer> ids, Robot robot) throws CodeExecutionException {
         CommandResult result = CommandResult.FALSE;
-        switch (getCommandType()) {
+        switch (getConditionalCommandType()) {
             case IF:
-                if (ExpressionAction.countBooleanExpression(getExpressionCommand(), ids)) {
+                if (ExpressionAction.countSimpleBooleanExpression(getExpressionCommand(), ids)) {
                     if (getCommands() != null) {
                         for (Command command : getCommands()) {
                             result = command.execute(ids, robot);
@@ -68,14 +70,14 @@ public class ConditionalCommand implements Command {
                 }
                 break;
             case WHILE:
-                while (ExpressionAction.countBooleanExpression(getExpressionCommand(), ids)) {
+                while (ExpressionAction.countSimpleBooleanExpression(getExpressionCommand(), ids)) {
                     for (Command command : getCommands()) {
                         result = command.execute(ids, robot);
                     }
                 }
                 break;
             default:
-                throw new CodeExecutionException("Unsupported operation: " + getCommandType());
+                throw new CodeExecutionException("Unsupported operation: " + getConditionalCommandType());
         }
         return result;
     }

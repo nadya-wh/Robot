@@ -11,6 +11,8 @@ import com.polovtseva.robot_executor.lexer.Lexer;
 public class Parser {
     private Lexer lexer;
 
+    private static int openedBras = 0;
+
     public Parser(Lexer lexer) {
         this.lexer = lexer;
     }
@@ -21,17 +23,19 @@ public class Parser {
         lexer.nextToken();
         int step = 0;
         while (lexer.getToken().getType() != Lexer.LexerValue.SEMICOLON) {
+            System.out.println(lexer.getToken());
             switch (lexer.getToken().getType()) {
                 case ID:
                 case NUM:
-                    if (command == null || command instanceof ExpressionCommand) { //|| command instanceof ConditionalCommand
+                    if (command == null ||
+                            command.getCommandEnum() == CommandEnum.EXPRESSION_COMMAND) { //|| command instanceof ConditionalCommand
                         command = expressionCommand;
                         buildExpressionCommand(expressionCommand, step);
                         step++;
-                    } else if (command instanceof OutputCommand) {
+                    } else if (command.getCommandEnum() == CommandEnum.OUTPUT_COMMAND) {
                         OutputCommand outputCommand = (OutputCommand) command;
                         outputCommand.setOperand(new Token(lexer.getToken().getValue(), lexer.getToken().getType()));
-                    } else if (command instanceof ConditionalCommand) {
+                    } else if (command.getCommandEnum() == CommandEnum.CONDITIONAL_COMMAND) {
                         ExpressionCommand current = ((ConditionalCommand) command).getExpressionCommand();
                         buildExpressionCommand(current, step);
                         step++;
@@ -53,7 +57,6 @@ public class Parser {
                     expressionCommand.setOperation(lexer.getToken().getType());
                     expressionCommand.setType(ExpressionType.BOOLEAN_TYPE);
                     break;
-
                 case VALUE_ASSIGNMENT:
                     expressionCommand.setType(ExpressionType.EQUAL);
                     break;
@@ -71,25 +74,26 @@ public class Parser {
                     expressionCommand.setType(ExpressionType.GO);
                     break;
                 case IF:
-                    command = new ConditionalCommand(CommandType.IF);
+                    command = new ConditionalCommand(ConditionalCommandType.IF);
                     break;
                 case WHILE:
-                    command = new ConditionalCommand(CommandType.WHILE);
+                    command = new ConditionalCommand(ConditionalCommandType.WHILE);
                     break;
                 case WRITE:
                     command = new OutputCommand();
                     break;
                 case LPAR: //(
-                    if (command != null && command instanceof ConditionalCommand) {
+                    if (command != null && command.getCommandEnum() == CommandEnum.CONDITIONAL_COMMAND) {
                         ((ConditionalCommand) command).setExpressionCommand(expressionCommand);
                     }
                     break;
                 case RPAR:
-                    if (command instanceof ConditionalCommand) {
+                    if (command.getCommandEnum() == CommandEnum.CONDITIONAL_COMMAND) {
                         return buildCommandBlock(command);
                     }
                     break;
                 case RBRA:
+                    openedBras--;
                     if (command != null) {
                         return command;
                     } else {
@@ -109,9 +113,12 @@ public class Parser {
     }
 
     private Command buildCommandBlock(Command command) throws CodeExecutionException {
+        openedBras++;
+        int braId = openedBras;
         ConditionalCommand conditionalCommand = (ConditionalCommand) command;
-        while (lexer.getToken().getType() != Lexer.LexerValue.RBRA) {
-            conditionalCommand.addCommand(parse());
+        while (openedBras != braId - 1) {
+            Command newCommand = parse();
+            conditionalCommand.addCommand(newCommand);
         }
         //lexer.nextToken();
         return command;

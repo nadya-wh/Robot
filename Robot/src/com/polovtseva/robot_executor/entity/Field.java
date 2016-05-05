@@ -3,7 +3,7 @@ package com.polovtseva.robot_executor.entity;
 import java.io.*;
 
 /**
- * Created by User on 20.10.2015.
+ * Field.
  */
 public class Field implements Serializable {
 
@@ -69,7 +69,6 @@ public class Field implements Serializable {
         ObjectOutputStream oos = new ObjectOutputStream(fos);
         oos.writeObject(this);
         oos.flush();
-        //TODO: check, why they don't have it in the example
         fos.close();
         oos.close();
 

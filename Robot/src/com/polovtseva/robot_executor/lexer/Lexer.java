@@ -4,7 +4,7 @@ import com.polovtseva.robot_executor.entity.Token;
 import com.polovtseva.robot_executor.exception.CodeExecutionException;
 
 /**
- * Created by User on 06.10.2015.
+ * Lexer.
  */
 public class Lexer {
     private String input;
@@ -83,22 +83,6 @@ public class Lexer {
                 }
             } else {
                 throw new CodeExecutionException("Unexpected symbol: " + currentSymbol);
-            }
-        }
-    }
-
-    public static void main(String[] args) {
-        String code = "a = 1;\n" +
-                "if (a = 1) {\n" +
-                "go;\n" +
-                "}\n";
-        Lexer lexer = new Lexer(code);
-        while (lexer.token.getType() != LexerValue.EOF) {
-            try {
-                lexer.nextToken();
-                System.out.println(lexer.token);
-            } catch (CodeExecutionException e) {
-                e.printStackTrace();
             }
         }
     }

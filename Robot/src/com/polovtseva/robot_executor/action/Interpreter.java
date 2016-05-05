@@ -41,6 +41,13 @@ public class Interpreter {
         return result != CommandResult.STOP;
     }
 
+    public void executeAll() throws CodeExecutionException {
+        boolean flag = true;
+        while (flag) {
+            flag = execute();
+        }
+    }
+
     public static MainFieldFrame getFrame() {
         return frame;
     }
@@ -64,7 +71,7 @@ public class Interpreter {
 //                ExpressionAction.countAssignmentExpression(expressionCommand, ids);
 //                break;
 //            case BOOLEAN_TYPE:
-//                ExpressionAction.countBooleanExpression(expressionCommand, ids);
+//                ExpressionAction.countSimpleBooleanExpression(expressionCommand, ids);
 //                break;
 //            case CHECK:
 //                return robot.check();
@@ -76,7 +83,7 @@ public class Interpreter {
 ////        boolean result = false;
 ////        switch (conditionalCommand.getCommandType()) {
 ////            case IF:
-////                if (ExpressionAction.countBooleanExpression(conditionalCommand.getExpressionCommand(), ids)) {
+////                if (ExpressionAction.countSimpleBooleanExpression(conditionalCommand.getExpressionCommand(), ids)) {
 ////                    if (conditionalCommand.getCommands() != null) {
 ////                        for (Command command : conditionalCommand.getCommands()) {
 ////                            result = executeCommand(command);
@@ -85,7 +92,7 @@ public class Interpreter {
 ////                }
 ////                break;
 ////            case WHILE:
-////                while (ExpressionAction.countBooleanExpression(conditionalCommand.getExpressionCommand(), ids)) {
+////                while (ExpressionAction.countSimpleBooleanExpression(conditionalCommand.getExpressionCommand(), ids)) {
 ////                    for (Command command : conditionalCommand.getCommands()) {
 ////                        result = executeCommand(command);
 ////                    }

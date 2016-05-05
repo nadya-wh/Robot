@@ -101,9 +101,10 @@ public class MenuCreator {
                             MainFieldFrame newFrame = new MainFieldFrame(parent.getCode());
                             newFrame.setVisible(true);
                         } else {
-                            JOptionPane.showMessageDialog(parent, "Invalid file.");
+                            JOptionPane.showMessageDialog(parent, "Invalid file.", "Error", JOptionPane.ERROR_MESSAGE);
                         }
                     } catch (IOException | ClassNotFoundException e1) {
+                        JOptionPane.showMessageDialog(parent, "Invalid file.", "Error", JOptionPane.ERROR_MESSAGE);
                         LOG.error(e);
                     }
                 }

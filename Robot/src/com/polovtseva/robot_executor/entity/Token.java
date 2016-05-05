@@ -59,11 +59,7 @@ public class Token implements Cloneable{
     }
 
     public void setValue(Integer value) {
-        if(value != null) {
-            this.value = value;
-        } else {
-            value = 0;
-        }
+        this.value = value != null ? value : 0;
     }
 
     public int getValue() {

@@ -1,8 +1,11 @@
 package com.polovtseva.robot_executor.view;
 
+import com.polovtseva.robot_executor.action.EditorPaneAction;
+import com.polovtseva.robot_executor.action.HighlightListener;
 import com.polovtseva.robot_executor.controller.Controller;
 import com.polovtseva.robot_executor.entity.*;
 import com.polovtseva.robot_executor.entity.Robot;
+import com.polovtseva.robot_executor.filter.CustomDocumentFilter;
 import com.polovtseva.robot_executor.util.ResizeAdapter;
 import org.apache.log4j.Logger;
 import org.jdesktop.swingx.prompt.PromptSupport;
@@ -10,6 +13,7 @@ import org.jdesktop.swingx.prompt.PromptSupport;
 import javax.swing.*;
 import javax.swing.table.*;
 import javax.swing.text.*;
+import javax.swing.text.html.HTMLEditorKit;
 import java.awt.*;
 import java.awt.event.*;
 
@@ -18,9 +22,9 @@ import java.awt.event.*;
  */
 public class MainFieldFrame extends JFrame {
 
-    private static final Logger LOG = Logger.getLogger(MainFieldFrame.class);
+    //private static final Logger LOG = Logger.getLogger(MainFieldFrame.class);
 
-    public static final int LOG_PANE_HEIGHT;
+    //public static final int LOG_PANE_HEIGHT;
 
     private static final DefaultStyledDocument document = new DefaultStyledDocument();
     private int rowHeight;
@@ -31,10 +35,11 @@ public class MainFieldFrame extends JFrame {
     private ImageIcon robotImage;
     private JLabel label;
     private JTable table;
-    private JTextArea codePane;
+    private JTextPane codePane;
     private JButton executeCodeButton;
     private JButton resetButton;
     private JButton stopExecuteCodeButton;
+    private JButton executeAllButton;
     private JScrollPane tableScrollPane;
     private JScrollPane codeScrollPane;
     private JScrollPane logScrollPane;
@@ -46,7 +51,7 @@ public class MainFieldFrame extends JFrame {
 
     static {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        LOG_PANE_HEIGHT = screenSize.height / 4;
+        //LOG_PANE_HEIGHT = screenSize.height / 4;
         WIDTH = (int) screenSize.getWidth();
         HEIGHT = (int) screenSize.getHeight() - 30;
     }
@@ -198,28 +203,26 @@ public class MainFieldFrame extends JFrame {
 
             }
         });
-
         tableScrollPane = new JScrollPane(table);
-
-        rowHeight = (HEIGHT - CONST - 80) / field.getRowCount();
         table.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
-        rowHeight = table.getRowHeight();
-        table.setRowHeight(rowHeight);
     }
 
     public void createLogPanel() {
         logPane = new JTextPane(document);
         logPane.setEditable(false);
         logScrollPane = new JScrollPane(logPane);
-        logScrollPane.setPreferredSize(new Dimension(this.getWidth(), LOG_PANE_HEIGHT));
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        logScrollPane.setPreferredSize(new Dimension((int)screenSize.getWidth(), screenSize.height / 4));
     }
 
     public void createCodePane() {
-        codePane = new JTextArea(5, 20);
-        PromptSupport.setPrompt("Enter your code here...", codePane);
-        codePane.setColumns(30);
+        codePane = new JTextPane();
+        codePane.setToolTipText("Enter your code here...");
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         codePane.setFont(new Font("Monospaced", Font.BOLD, 14));
         codeScrollPane = new JScrollPane(codePane);
+        codeScrollPane.setPreferredSize(new Dimension((int) (screenSize.getWidth() / 4), screenSize.height));
+        ((AbstractDocument) codePane.getDocument()).setDocumentFilter(new CustomDocumentFilter(codePane.getStyledDocument()));
     }
 
 
@@ -228,12 +231,18 @@ public class MainFieldFrame extends JFrame {
         executeCodeButton = new JButton(new ImageIcon(this.getClass().getResource(ImageWorker.RUN_ICON_PATH)));
         stopExecuteCodeButton = new JButton(new ImageIcon(this.getClass().getResource(ImageWorker.STOP_ICON_PATH)));
         resetButton = new JButton(new ImageIcon(this.getClass().getResource(ImageWorker.RESET_ICON_PATH)));
+        executeAllButton = new JButton(new ImageIcon(this.getClass().getResource(ImageWorker.PLAY_ALL_ICON_PATH)));
+        executeAllButton.setToolTipText("Run all");
+        executeCodeButton.setToolTipText("Run one step");
+        stopExecuteCodeButton.setToolTipText("Stop executing code");
+        resetButton.setToolTipText("Reset robot position");
         makeBeautifulButton(executeCodeButton);
         makeBeautifulButton(stopExecuteCodeButton);
         makeBeautifulButton(resetButton);
+        makeBeautifulButton(executeAllButton);
         buttonPanel.add(executeCodeButton);
-        //buttonPanel.add(executeAllButton);
         buttonPanel.add(stopExecuteCodeButton);
+        buttonPanel.add(executeAllButton);
         buttonPanel.add(resetButton);
 
         executeCodeButton.addActionListener(Controller.getInstance().getCodeExecuteActionListener());
@@ -255,10 +264,12 @@ public class MainFieldFrame extends JFrame {
                 refreshTable();
             }
         });
+        executeAllButton.addActionListener(Controller.getInstance().getCodeExecuteActionListener());
     }
 
     public void stopExecutingCode() {
-        logPane.setText(logPane.getText() + "The program has finished.\n");
+        EditorPaneAction.addAlertText(logPane, "The program has finished\n");
+        //logPane.setText(logPane.getText() + "The program has finished.\n");
         Controller.getInstance().setExecuting(false);
         setCodePaneEditable();
     }
@@ -275,7 +286,8 @@ public class MainFieldFrame extends JFrame {
     public void refreshTable() {
         Robot robot = Controller.getInstance().getRobot();
         Field field = Controller.getInstance().getField();
-        rowHeight = (this.getHeight() - upHeight - CONST) / field.getRowCount();
+        Dimension screenSize = this.getContentPane().getSize();
+        rowHeight = (3 * screenSize.height / 4 - 37) / field.getRowCount();
         if (rowHeight > 1) {
             //for robot image
             columnWidth = ((this.getHeight() - codeScrollPane.getWidth()) / field.getColumnCount());
@@ -306,5 +318,22 @@ public class MainFieldFrame extends JFrame {
 
     public JTextPane getLogPane() {
         return logPane;
+    }
+
+    public void resetPanes() {
+        Dimension screenSize = this.getContentPane().getSize();
+        codeScrollPane.setPreferredSize(new Dimension((int) (screenSize.getWidth() / 4), screenSize.height));
+        logScrollPane.setPreferredSize(new Dimension((int)screenSize.getWidth(), screenSize.height / 4));
+        tableScrollPane.setPreferredSize(new Dimension((int) (3 * screenSize.getWidth() / 4), (3 * screenSize.height - 100)/ 4));
+        //table.setPreferredSize(new Dimension((int)( 3 * screenSize.getWidth() / 4), (int)(3 * screenSize.height / 4)));
+
+    }
+
+    public JButton getExecuteCodeButton() {
+        return executeCodeButton;
+    }
+
+    public JButton getExecuteAllButton() {
+        return executeAllButton;
     }
 }

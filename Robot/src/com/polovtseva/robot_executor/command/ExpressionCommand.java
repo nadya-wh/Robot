@@ -11,7 +11,7 @@ import java.util.HashMap;
 /**
  * Created by User on 26.01.2016.
  */
-public class ExpressionCommand implements Command {
+public class ExpressionCommand extends Command {
     private Token firstOperand;
     private Token secondOperand;
     private Token thirdOperand;
@@ -19,6 +19,7 @@ public class ExpressionCommand implements Command {
     private ExpressionType type;
 
     public ExpressionCommand() {
+        this.commandEnum = CommandEnum.EXPRESSION_COMMAND;
     }
 
     public Token getFirstOperand() {
@@ -81,7 +82,7 @@ public class ExpressionCommand implements Command {
                 ExpressionAction.countAssignmentExpression(this, ids);
                 break;
             case BOOLEAN_TYPE:
-                ExpressionAction.countBooleanExpression(this, ids);
+                ExpressionAction.countSimpleBooleanExpression(this, ids);
                 break;
             case CHECK:
                 return robot.check() ? CommandResult.TRUE : CommandResult.FALSE;
